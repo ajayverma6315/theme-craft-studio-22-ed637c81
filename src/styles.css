@@ -40,12 +40,13 @@
 :root {
   --radius: 0.5rem;
 
-  /* Brand palette */
-  --cream: oklch(0.975 0.018 95);
-  --cream-deep: oklch(0.945 0.025 92);
-  --ink: oklch(0.18 0.01 240);
-  --teal: oklch(0.55 0.11 215);
-  --teal-bright: oklch(0.72 0.13 210);
+  /* Brand palette — premium charcoal / cream / deep green */
+  --cream: oklch(0.965 0.012 85);
+  --cream-deep: oklch(0.93 0.018 85);
+  --ink: oklch(0.22 0.008 250);
+  --charcoal: oklch(0.28 0.008 250);
+  --teal: oklch(0.42 0.07 165);
+  --teal-bright: oklch(0.55 0.09 160);
 
   /* Mapped semantics */
   --background: var(--cream);
@@ -59,13 +60,13 @@
   --secondary: var(--cream-deep);
   --secondary-foreground: var(--ink);
   --muted: var(--cream-deep);
-  --muted-foreground: oklch(0.45 0.015 240);
+  --muted-foreground: oklch(0.42 0.012 250);
   --accent: var(--teal-bright);
   --accent-foreground: var(--ink);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.88 0.015 90);
-  --input: oklch(0.9 0.012 90);
+  --border: oklch(0.86 0.012 85);
+  --input: oklch(0.9 0.01 85);
   --ring: var(--teal);
   --chart-1: var(--teal);
   --chart-2: var(--teal-bright);
@@ -78,11 +79,11 @@
   --sidebar-primary-foreground: oklch(0.98 0 0);
   --sidebar-accent: var(--cream-deep);
   --sidebar-accent-foreground: var(--ink);
-  --sidebar-border: oklch(0.88 0.015 90);
+  --sidebar-border: oklch(0.86 0.012 85);
   --sidebar-ring: var(--teal);
 
   --gradient-teal: linear-gradient(135deg, var(--teal) 0%, var(--teal-bright) 100%);
-  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.04), 0 8px 24px -12px oklch(0 0 0 / 0.08);
+  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.04), 0 8px 32px -16px oklch(0 0 0 / 0.12);
 }
 
 .dark {

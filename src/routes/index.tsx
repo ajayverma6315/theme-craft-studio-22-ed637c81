@@ -60,10 +60,10 @@ function HomePage() {
             <h1 className="text-5xl font-black leading-[0.95] tracking-tight md:text-7xl">
               PRECISION<br />IN MOTION.
             </h1>
-            <p className="mt-6 max-w-md text-base text-muted-foreground">
-              A high-performance coaching sanctuary. We train the human design through
-              deliberate methodology and undivided attention to your specific physical
-              blueprint.
+            <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
+              Welcome to the high-performance coaching sanctuary. We engineer
+              your peak physical blueprint through deliberate methodology and
+              elite 1:1 attention.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -94,11 +94,13 @@ function HomePage() {
 
       {/* Stats */}
       <section className="border-y border-border bg-secondary/40">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-6 py-10 md:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <div className="font-display text-3xl font-bold text-primary md:text-4xl">{s.value}</div>
-              <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-border px-6 py-12 md:grid-cols-4 md:divide-x">
+          {stats.map((s, i) => (
+            <div key={s.label} className={i > 0 ? "md:pl-8" : ""}>
+              <div className="font-display text-4xl font-bold tracking-tight text-primary md:text-5xl">
+                {s.value}
+              </div>
+              <div className="mt-2 text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
                 {s.label}
               </div>
             </div>
@@ -126,8 +128,9 @@ function HomePage() {
             <div className="relative flex h-full flex-col justify-end p-8">
               <p className="eyebrow !text-accent">— First Class</p>
               <h3 className="mt-2 font-display text-3xl font-bold text-cream">Personal Training</h3>
-              <p className="mt-2 max-w-md text-sm text-cream/70">
-                Tailored one-on-one coaching designed for your specific physiological output.
+              <p className="mt-2 max-w-md text-sm leading-relaxed text-cream/70">
+                Tailored 1:1 coaching engineered for your exact physiological
+                needs and peak output.
               </p>
               <Link
                 to="/workouts"
@@ -163,8 +166,10 @@ function HomePage() {
           <article className="rounded-lg bg-card p-7 shadow-[var(--shadow-card)]">
             <p className="eyebrow">— Restoration</p>
             <h3 className="mt-2 font-display text-2xl font-bold">The Recovery Sanctuary</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              High-performance culture requires high-resolution recovery. Our sanctuary features cryo &amp; plunge therapy, infrared sauna, and lymphatic drainage.
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              High-performance culture demands elite recovery. Our sanctuary
+              features cryo &amp; plunge therapy, infrared sauna, and lymphatic
+              drainage.
             </p>
             <div className="mt-4 flex flex-wrap gap-2 text-xs">
               <span className="rounded border border-border bg-secondary px-3 py-1">Cryotherapy</span>
@@ -186,16 +191,17 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Thought Before Throughput */}
+      {/* Thought Before Execution */}
       <section className="bg-secondary/50">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-2 lg:py-32">
           <div>
             <h2 className="font-display text-4xl font-black leading-[1] md:text-5xl">
-              THOUGHT<br />BEFORE<br />THROUGHPUT.
+              THOUGHT<br />BEFORE<br />EXECUTION.
             </h2>
-            <p className="mt-6 max-w-sm text-sm text-muted-foreground">
-              We reject the "more is more" philosophy of modern fitness. True kinetic
-              mastery comes from deliberate, precise intention in every contraction.
+            <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
+              We reject the "more is more" philosophy of modern fitness. True
+              kinetic mastery comes from deliberate, precise intention in every
+              single contraction.
             </p>
             <Link
               to="/philosophy"
@@ -204,13 +210,15 @@ function HomePage() {
               Our Philosophy <span className="h-px w-8 bg-primary" />
             </Link>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-10">
             {principles.map((p) => (
-              <div key={p.n} className="grid grid-cols-[auto_1fr] gap-5">
-                <span className="font-display text-2xl font-bold text-muted-foreground/60">{p.n}</span>
+              <div key={p.n} className="grid grid-cols-[auto_1fr] gap-6 border-b border-border pb-10 last:border-0 last:pb-0">
+                <span className="font-display text-4xl font-black leading-none text-primary md:text-5xl">
+                  {p.n}
+                </span>
                 <div>
-                  <h4 className="font-display text-lg font-bold">{p.title}</h4>
-                  <p className="mt-1 text-sm text-muted-foreground">{p.body}</p>
+                  <h4 className="font-display text-xl font-bold">{p.title}</h4>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
                 </div>
               </div>
             ))}
@@ -231,18 +239,22 @@ function HomePage() {
             What members say after six months inside the sanctuary.
           </p>
         </div>
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3">
           {[
             { q: "I came in chasing aesthetics. I left with a body that performs. Kinetic rewires how you think about training.", n: "Alexander Vance", r: "Performance Member · 18 mo" },
             { q: "The 1:1 attention is unmatched. Marcus rebuilt my squat from the ground up — no plate ego, just precision.", n: "Priya Shah", r: "Elite Member · 2 yr" },
             { q: "The recovery suite alone is worth the membership. Cryo, infrared, and a coach who actually reads your bloodwork.", n: "James Okafor", r: "Foundations Member · 8 mo" },
           ].map((t) => (
-            <figure key={t.n} className="rounded-lg bg-card p-7 shadow-[var(--shadow-card)]">
-              <div className="font-display text-3xl leading-none text-primary">"</div>
-              <blockquote className="mt-2 text-sm leading-relaxed text-foreground/90">{t.q}</blockquote>
-              <figcaption className="mt-6 border-t border-border pt-4">
+            <figure key={t.n} className="flex flex-col rounded-lg bg-card p-10 shadow-[var(--shadow-card)]">
+              <div className="font-display text-5xl leading-none text-primary">"</div>
+              <blockquote className="mt-6 flex-1 text-base leading-relaxed text-foreground/90">
+                {t.q}
+              </blockquote>
+              <figcaption className="mt-10 border-t border-border pt-5">
                 <div className="font-display text-sm font-bold">{t.n}</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">{t.r}</div>
+                <div className="mt-1 text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
+                  {t.r}
+                </div>
               </figcaption>
             </figure>
           ))}
