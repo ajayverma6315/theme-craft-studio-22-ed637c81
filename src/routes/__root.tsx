@@ -42,6 +42,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Kinetic — Refinement Through Motion" },
+      { name: "description", content: "Your Page Design creates custom website layouts with a consistent theme and branding for your business." },
+      { property: "og:description", content: "Your Page Design creates custom website layouts with a consistent theme and branding for your business." },
+      { name: "twitter:description", content: "Your Page Design creates custom website layouts with a consistent theme and branding for your business." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c9cabcae-e077-4109-8dbc-360fb7f08063/id-preview-fd6887a2--52515074-5797-4c6d-a802-870b3e8d7c32.lovable.app-1776572114207.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c9cabcae-e077-4109-8dbc-360fb7f08063/id-preview-fd6887a2--52515074-5797-4c6d-a802-870b3e8d7c32.lovable.app-1776572114207.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
