@@ -218,6 +218,65 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="eyebrow">Member Voices</p>
+            <h2 className="mt-3 font-display text-4xl font-black md:text-5xl">
+              WORDS FROM<br />THE FLOOR.
+            </h2>
+          </div>
+          <p className="max-w-sm text-sm text-muted-foreground">
+            What members say after six months inside the sanctuary.
+          </p>
+        </div>
+        <div className="grid gap-5 md:grid-cols-3">
+          {[
+            { q: "I came in chasing aesthetics. I left with a body that performs. Kinetic rewires how you think about training.", n: "Alexander Vance", r: "Performance Member · 18 mo" },
+            { q: "The 1:1 attention is unmatched. Marcus rebuilt my squat from the ground up — no plate ego, just precision.", n: "Priya Shah", r: "Elite Member · 2 yr" },
+            { q: "The recovery suite alone is worth the membership. Cryo, infrared, and a coach who actually reads your bloodwork.", n: "James Okafor", r: "Foundations Member · 8 mo" },
+          ].map((t) => (
+            <figure key={t.n} className="rounded-lg bg-card p-7 shadow-[var(--shadow-card)]">
+              <div className="font-display text-3xl leading-none text-primary">"</div>
+              <blockquote className="mt-2 text-sm leading-relaxed text-foreground/90">{t.q}</blockquote>
+              <figcaption className="mt-6 border-t border-border pt-4">
+                <div className="font-display text-sm font-bold">{t.n}</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">{t.r}</div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-secondary/50">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[auto_1fr]">
+          <div>
+            <p className="eyebrow">Frequently Asked</p>
+            <h2 className="mt-3 font-display text-4xl font-black leading-[1] md:text-5xl">
+              QUESTIONS,<br />ANSWERED.
+            </h2>
+          </div>
+          <div className="divide-y divide-border">
+            {[
+              { q: "Do I need prior training experience to join?", a: "No. Every member begins with a movement assessment so your prescription is built around your current capacity, not someone else's." },
+              { q: "How is Kinetic different from a regular gym?", a: "We are a coached facility, not an open gym. Membership includes structured programming, biometric tracking, and access to recovery infrastructure." },
+              { q: "Can I bring guests?", a: "Foundations members receive two guest passes monthly. Performance and Elite tiers include unlimited curated guest access by appointment." },
+              { q: "What is the cancellation policy?", a: "Memberships are month-to-month with a 30-day notice. We never lock anyone into a contract — discipline shouldn't require legal compulsion." },
+            ].map((f) => (
+              <details key={f.q} className="group py-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-bold">
+                  {f.q}
+                  <span className="text-2xl text-primary transition group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-ink text-cream" style={{ backgroundColor: "oklch(0.18 0.01 240)" }}>
         <div className="mx-auto max-w-3xl px-6 py-20 text-center">
