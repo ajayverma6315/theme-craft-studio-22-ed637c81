@@ -28,82 +28,49 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-ink: var(--ink);
-  --color-cream: var(--cream);
-  --color-cream-deep: var(--cream-deep);
-  --color-teal: var(--teal);
-  --color-teal-bright: var(--teal-bright);
-  --font-display: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --color-yellow: var(--yellow);
+  --color-yellow-deep: var(--yellow-deep);
+  --color-charcoal: var(--charcoal);
+  --color-jet: var(--jet);
+  --font-display: "Bebas Neue", "Oswald", "Inter", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.5rem;
 
-  /* Brand palette — premium charcoal / cream / deep green */
-  --cream: oklch(0.965 0.012 85);
-  --cream-deep: oklch(0.93 0.018 85);
-  --ink: oklch(0.22 0.008 250);
-  --charcoal: oklch(0.28 0.008 250);
-  --teal: oklch(0.42 0.07 165);
-  --teal-bright: oklch(0.55 0.09 160);
+  /* Brand palette — matte black, charcoal, yellow accent */
+  --jet: oklch(0.16 0.005 270);          /* near-black bg */
+  --charcoal: oklch(0.24 0.005 270);      /* card surface */
+  --charcoal-2: oklch(0.30 0.006 270);    /* elevated */
+  --yellow: oklch(0.86 0.18 95);          /* equipment yellow */
+  --yellow-deep: oklch(0.78 0.19 85);
+  --cream: oklch(0.97 0.01 90);
 
-  /* Mapped semantics */
-  --background: var(--cream);
-  --foreground: var(--ink);
-  --card: oklch(1 0 0);
-  --card-foreground: var(--ink);
-  --popover: oklch(1 0 0);
-  --popover-foreground: var(--ink);
-  --primary: var(--teal);
-  --primary-foreground: oklch(0.98 0.005 95);
-  --secondary: var(--cream-deep);
-  --secondary-foreground: var(--ink);
-  --muted: var(--cream-deep);
-  --muted-foreground: oklch(0.42 0.012 250);
-  --accent: var(--teal-bright);
-  --accent-foreground: var(--ink);
+  /* Mapped semantics — DARK by default */
+  --background: var(--jet);
+  --foreground: var(--cream);
+  --card: var(--charcoal);
+  --card-foreground: var(--cream);
+  --popover: var(--charcoal);
+  --popover-foreground: var(--cream);
+  --primary: var(--yellow);
+  --primary-foreground: oklch(0.15 0 0);
+  --secondary: var(--charcoal-2);
+  --secondary-foreground: var(--cream);
+  --muted: var(--charcoal-2);
+  --muted-foreground: oklch(0.72 0.01 270);
+  --accent: var(--yellow-deep);
+  --accent-foreground: oklch(0.15 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.86 0.012 85);
-  --input: oklch(0.9 0.01 85);
-  --ring: var(--teal);
-  --chart-1: var(--teal);
-  --chart-2: var(--teal-bright);
-  --chart-3: oklch(0.4 0.04 240);
-  --chart-4: oklch(0.7 0.08 200);
-  --chart-5: oklch(0.6 0.1 180);
-  --sidebar: var(--cream);
-  --sidebar-foreground: var(--ink);
-  --sidebar-primary: var(--teal);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: var(--cream-deep);
-  --sidebar-accent-foreground: var(--ink);
-  --sidebar-border: oklch(0.86 0.012 85);
-  --sidebar-ring: var(--teal);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: var(--yellow);
 
-  --gradient-teal: linear-gradient(135deg, var(--teal) 0%, var(--teal-bright) 100%);
-  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.04), 0 8px 32px -16px oklch(0 0 0 / 0.12);
-}
-
-.dark {
-  --background: var(--ink);
-  --foreground: var(--cream);
-  --card: oklch(0.22 0.012 240);
-  --card-foreground: var(--cream);
-  --popover: oklch(0.22 0.012 240);
-  --popover-foreground: var(--cream);
-  --primary: var(--teal-bright);
-  --primary-foreground: var(--ink);
-  --secondary: oklch(0.25 0.015 240);
-  --secondary-foreground: var(--cream);
-  --muted: oklch(0.25 0.015 240);
-  --muted-foreground: oklch(0.7 0.02 240);
-  --accent: var(--teal);
-  --accent-foreground: var(--cream);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: var(--teal-bright);
+  --gradient-yellow: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-deep) 100%);
+  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.4), 0 12px 40px -16px oklch(0 0 0 / 0.6);
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--yellow) 30%, transparent), 0 12px 40px -10px color-mix(in oklab, var(--yellow) 35%, transparent);
 }
 
 @layer base {
@@ -114,6 +81,7 @@
   html {
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -124,20 +92,29 @@
 
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
-    letter-spacing: -0.015em;
-    font-weight: 600;
+    letter-spacing: 0.005em;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   .font-display {
     font-family: var(--font-display);
-    letter-spacing: -0.015em;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
   }
 
   .eyebrow {
     font-size: 0.7rem;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--color-primary);
-    font-weight: 600;
+    font-weight: 700;
   }
+
+  /* subtle reveal on scroll-friendly entrance */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .rise { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) both; }
 }
