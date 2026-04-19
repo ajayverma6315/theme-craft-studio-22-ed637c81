@@ -231,32 +231,32 @@ function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
+      <section className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
+        <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="eyebrow">Member Voices</p>
-            <h2 className="mt-3 font-display text-4xl font-black md:text-5xl">
-              WORDS FROM<br />THE FLOOR.
+            <p className="eyebrow">— The Inner Circle</p>
+            <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.05] md:text-5xl">
+              Member <em className="italic">Perspectives.</em>
             </h2>
           </div>
-          <p className="max-w-sm text-sm text-muted-foreground">
-            What members say after six months inside the sanctuary.
+          <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
+            Quiet observations from inside the sanctuary — six months and beyond.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {[
-            { q: "I came in chasing aesthetics. I left with a body that performs. Kinetic rewires how you think about training.", n: "Alexander Vance", r: "Performance Member · 18 mo" },
-            { q: "The 1:1 attention is unmatched. Marcus rebuilt my squat from the ground up — no plate ego, just precision.", n: "Priya Shah", r: "Elite Member · 2 yr" },
-            { q: "The recovery suite alone is worth the membership. Cryo, infrared, and a coach who actually reads your bloodwork.", n: "James Okafor", r: "Foundations Member · 8 mo" },
+            { q: "Kinetic didn't just change my physique; it changed how I approach my entire day. It's the difference between being 'tired' and being 'highly tuned'.", n: "Alexander Vance", r: "Performance Member · 18 mo" },
+            { q: "The 1:1 attention is unmatched. Marcus rebuilt my squat from the ground up — no plate ego, just precision and patience.", n: "Priya Shah", r: "Elite Member · 2 yr" },
+            { q: "I sleep deeper. I think clearer. The recovery suite alone is worth the membership — and a coach who actually reads your bloodwork.", n: "James Okafor", r: "Foundations Member · 8 mo" },
           ].map((t) => (
             <figure key={t.n} className="flex flex-col rounded-lg bg-card p-10 shadow-[var(--shadow-card)]">
-              <div className="font-display text-5xl leading-none text-primary">"</div>
-              <blockquote className="mt-6 flex-1 text-base leading-relaxed text-foreground/90">
+              <div className="font-display text-6xl italic leading-none text-primary">"</div>
+              <blockquote className="mt-6 flex-1 font-display text-lg italic leading-relaxed text-foreground/90">
                 {t.q}
               </blockquote>
               <figcaption className="mt-10 border-t border-border pt-5">
-                <div className="font-display text-sm font-bold">{t.n}</div>
-                <div className="mt-1 text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
+                <div className="font-display text-base font-semibold">{t.n}</div>
+                <div className="mt-1.5 text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
                   {t.r}
                 </div>
               </figcaption>
@@ -267,26 +267,26 @@ function HomePage() {
 
       {/* FAQ */}
       <section className="bg-secondary/50">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[auto_1fr]">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[auto_1fr] lg:py-32">
           <div>
-            <p className="eyebrow">Frequently Asked</p>
-            <h2 className="mt-3 font-display text-4xl font-black leading-[1] md:text-5xl">
-              QUESTIONS,<br />ANSWERED.
+            <p className="eyebrow">— Frequently Asked</p>
+            <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.05] md:text-5xl">
+              Questions,<br /><em className="italic">answered.</em>
             </h2>
           </div>
           <div className="divide-y divide-border">
             {[
-              { q: "Do I need prior training experience to join?", a: "No. Every member begins with a movement assessment so your prescription is built around your current capacity, not someone else's." },
-              { q: "How is Kinetic different from a regular gym?", a: "We are a coached facility, not an open gym. Membership includes structured programming, biometric tracking, and access to recovery infrastructure." },
+              { q: "Do I need prior training experience to join?", a: "No. Every member begins with a movement assessment so your protocol is built around your current capacity, not someone else's." },
+              { q: "How is Kinetic different from a regular gym?", a: "We are a coached sanctuary, not an open gym. Membership includes bespoke programming, biometric mapping, and access to systemic restoration." },
               { q: "Can I bring guests?", a: "Foundations members receive two guest passes monthly. Performance and Elite tiers include unlimited curated guest access by appointment." },
               { q: "What is the cancellation policy?", a: "Memberships are month-to-month with a 30-day notice. We never lock anyone into a contract — discipline shouldn't require legal compulsion." },
             ].map((f) => (
-              <details key={f.q} className="group py-5">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-bold">
+              <details key={f.q} className="group py-6">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-xl font-semibold">
                   {f.q}
                   <span className="text-2xl text-primary transition group-open:rotate-45">+</span>
                 </summary>
-                <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
               </details>
             ))}
           </div>
@@ -294,19 +294,21 @@ function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-ink text-cream" style={{ backgroundColor: "oklch(0.18 0.01 240)" }}>
-        <div className="mx-auto max-w-3xl px-6 py-20 text-center">
-          <h2 className="font-display text-4xl font-black md:text-5xl" style={{ color: "oklch(0.975 0.018 95)" }}>
-            ARE YOU READY FOR<br />REFINEMENT?
+      <section style={{ backgroundColor: "oklch(0.22 0.008 250)" }}>
+        <div className="mx-auto max-w-3xl px-6 py-28 text-center md:py-36">
+          <p className="eyebrow" style={{ color: "oklch(0.55 0.09 160)" }}>— Membership</p>
+          <h2 className="mt-6 font-display text-4xl font-semibold leading-[1.05] md:text-6xl" style={{ color: "oklch(0.965 0.012 85)" }}>
+            Are you ready for<br /><em className="italic">refinement?</em>
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-sm" style={{ color: "oklch(0.75 0.02 95)" }}>
-            Limited availability for select personal coaching. Apply for sanctuary membership today.
+          <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed" style={{ color: "oklch(0.78 0.015 85)" }}>
+            Limited availability for select personal coaching. Apply for
+            sanctuary membership today.
           </p>
           <Link
             to="/memberships"
-            className="mt-8 inline-block rounded-md bg-gradient-to-br from-primary to-accent px-8 py-3 text-sm font-medium text-primary-foreground shadow-lg"
+            className="mt-10 inline-block rounded-md bg-primary px-9 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground shadow-lg transition-opacity hover:opacity-90"
           >
-            Apply For Membership
+            Request an Invitation
           </Link>
         </div>
       </section>
