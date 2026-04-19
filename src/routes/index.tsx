@@ -1,315 +1,505 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { ArrowUpRight, CheckCircle2 } from "lucide-react";
-import heroGym from "@/assets/hero-gym.jpg";
-import personalTraining from "@/assets/personal-training.jpg";
-import recovery from "@/assets/recovery.jpg";
+import {
+  CheckCircle2,
+  Star,
+  Users,
+  Dumbbell,
+  Clock,
+  Award,
+  MapPin,
+  Phone,
+  MessageCircle,
+  Flame,
+  Heart,
+  Trophy,
+  UserCheck,
+  Sparkles,
+} from "lucide-react";
+
+import gymFloor1 from "@/assets/gym-floor-1.webp";
+import gymWindows from "@/assets/gym-windows.webp";
+import gymRack from "@/assets/gym-rack.webp";
+import gymCardio from "@/assets/gym-cardio.webp";
+import gymCable from "@/assets/gym-cable.webp";
+import gymYellow from "@/assets/gym-yellow-machines.webp";
+import gymBench from "@/assets/gym-bench.webp";
+import gymWood from "@/assets/gym-wood-ceiling.webp";
+import gymPulley from "@/assets/gym-pulley.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kinetic — Precision in Motion" },
+      { title: "Best Gym in Sikar | Iron Forge Fitness — Premium Gym Sikar Rajasthan" },
       {
         name: "description",
         content:
-          "A high-performance coaching sanctuary. We train the human design through deliberate methodology and undivided attention.",
+          "Iron Forge is Sikar's premium gym. Imported equipment, certified trainers, weight loss & muscle gain programs. Open 6 AM – 11 PM. Book a free trial today.",
       },
-      { property: "og:title", content: "Kinetic — Precision in Motion" },
+      { property: "og:title", content: "Iron Forge — Best Premium Gym in Sikar" },
       {
         property: "og:description",
-        content: "Engineered services for the disciplined elite.",
+        content: "Real results, real equipment, real coaches in Sikar, Rajasthan.",
       },
+      { property: "og:image", content: "/og.jpg" },
     ],
   }),
   component: HomePage,
 });
 
 const stats = [
-  { value: "12k+", label: "Members coached" },
-  { value: "98%", label: "Retention rate" },
-  { value: "1:1", label: "Coaching ratio" },
-  { value: "24/7", label: "Sanctuary access" },
+  { icon: Users, value: "500+", label: "Active Members" },
+  { icon: Dumbbell, value: "Imported", label: "Premium Equipment" },
+  { icon: Award, value: "Certified", label: "Expert Trainers" },
+  { icon: Clock, value: "6AM – 11PM", label: "Open Daily" },
 ];
 
-const principles = [
+const programs = [
+  { icon: Flame, title: "Weight Loss", desc: "Fat-burn protocols, HIIT, and nutrition guidance for visible results in 90 days." },
+  { icon: Dumbbell, title: "Muscle Gain", desc: "Hypertrophy programming with progressive overload and recovery tracking." },
+  { icon: Trophy, title: "Strength Training", desc: "Powerlifting fundamentals — squat, bench, deadlift coached by experts." },
+  { icon: UserCheck, title: "Personal Training", desc: "1-on-1 coaching with custom plans, form correction, and accountability." },
+  { icon: Heart, title: "Women's Fitness", desc: "Dedicated programs for toning, strength, and confidence in a safe space." },
+  { icon: Sparkles, title: "Beginner Onboarding", desc: "First-time in a gym? We'll teach you every machine, every lift, step by step." },
+];
+
+const whyUs = [
+  "Imported machines from world-class brands",
+  "Spacious, premium interior with high ceilings",
+  "Spotless, sanitised environment daily",
+  "Certified trainers on the floor at all times",
+  "Flexible memberships — no long lock-ins",
+  "Dedicated cardio, strength & functional zones",
+];
+
+const reviews = [
   {
-    n: "01",
-    title: "Neural Priming",
-    body: "Preparing the central nervous system for efficient output through specific mobility and cognitive intent before any load is introduced.",
+    name: "Rohit Sharma",
+    role: "Member · 14 months",
+    stars: 5,
+    text: "Best gym in Sikar, hands down. Equipment is brand new, trainers actually correct your form, and the place is always clean. Lost 12 kg in 6 months.",
   },
   {
-    n: "02",
-    title: "Load Management",
-    body: "Precise tracking calibrates every set to your current state — preventing plateaus and overreaching with surgical accuracy.",
+    name: "Pooja Agarwal",
+    role: "Member · 8 months",
+    stars: 5,
+    text: "As a woman I felt completely safe and supported. The trainers are respectful and made my first gym experience really comfortable. Loving the results.",
   },
   {
-    n: "03",
-    title: "Systemic Reset",
-    body: "Deep neuro-muscular down-regulation as a non-negotiable closing ritual. Recovery is engineered, never assumed.",
+    name: "Vikram Singh",
+    role: "Member · 2 years",
+    stars: 5,
+    text: "I've tried 3 gyms in Sikar — Iron Forge is in a different league. Imported machines, AC, music, and coaches who care. Worth every rupee.",
   },
 ];
+
+const pricing = [
+  {
+    name: "Monthly",
+    price: "1,499",
+    period: "/ month",
+    perks: ["Full gym access", "Group classes", "Locker access", "Open 6AM–11PM"],
+    cta: "Start Monthly",
+  },
+  {
+    name: "Quarterly",
+    price: "3,999",
+    period: "/ 3 months",
+    perks: ["Everything in Monthly", "1 free PT session", "Diet consultation", "Save ₹500"],
+    cta: "Most Popular",
+    featured: true,
+  },
+  {
+    name: "Yearly",
+    price: "10,999",
+    period: "/ 12 months",
+    perks: ["Everything in Quarterly", "4 free PT sessions", "Body composition test", "Save ₹6,989"],
+    cta: "Best Value",
+  },
+];
+
+const wa = "https://wa.me/919876543210?text=Hi%20Iron%20Forge%2C%20I%20want%20to%20book%20a%20free%20trial.";
 
 function HomePage() {
   return (
     <SiteLayout>
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 pt-12 pb-20 lg:grid-cols-2 lg:items-center lg:gap-16">
-          <div>
-            <p className="eyebrow mb-6">— The Kinetic Protocol</p>
-            <h1 className="text-5xl font-semibold leading-[1.02] tracking-tight md:text-7xl">
-              The Apex of<br /><em className="italic">Human Engineering.</em>
+      {/* HERO */}
+      <section className="relative isolate overflow-hidden">
+        <img
+          src={gymYellow}
+          alt="Iron Forge premium gym floor in Sikar with yellow strength equipment"
+          width={1600}
+          height={1067}
+          fetchPriority="high"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/85 via-background/70 to-background" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/40 to-transparent" />
+
+        <div className="mx-auto max-w-7xl px-6 pt-20 pb-28 md:pt-28 md:pb-36">
+          <div className="max-w-2xl rise">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+              Sikar's #1 Premium Gym
+            </div>
+            <h1 className="mt-6 font-display text-5xl leading-[0.95] tracking-tight text-foreground md:text-7xl lg:text-[5.5rem]">
+              Sikar's Premium Gym
+              <span className="mt-2 block text-primary">For Real Results.</span>
             </h1>
-            <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground">
-              Standard gyms focus on volume. We focus on your specific
-              biological blueprint. Experience 1:1 coaching where data meets
-              discipline.
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-foreground/80 md:text-lg">
+              Build strength, lose fat, and transform your body with expert coaching
+              and world-class imported equipment — right here in Sikar.
             </p>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Link
-                to="/memberships"
-                className="rounded-md bg-primary px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-sm transition-opacity hover:opacity-90"
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={wa}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-7 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90"
               >
-                Request an Invitation
-              </Link>
-              <Link
-                to="/philosophy"
-                className="rounded-md border border-border bg-card px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-secondary"
+                <MessageCircle className="h-4 w-4" /> Join Free Trial
+              </a>
+              <a
+                href="tel:+919876543210"
+                className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/5 px-7 py-4 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur transition hover:border-primary/60 hover:text-primary"
               >
-                The Protocol
-              </Link>
+                <Phone className="h-4 w-4" /> Call Now
+              </a>
             </div>
-          </div>
-          <div className="relative">
-            <img
-              src={heroGym}
-              alt="Kinetic sanctuary gym interior"
-              width={1600}
-              height={1024}
-              className="aspect-[4/3] w-full rounded-lg object-cover shadow-[var(--shadow-card)]"
-            />
+
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs uppercase tracking-widest text-foreground/60">
+              <span className="flex items-center gap-1.5"><Star className="h-3.5 w-3.5 fill-primary text-primary" /> 4.9 Google Rating</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 text-primary" /> 500+ Members</span>
+              <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-primary" /> Piprali Road, Sikar</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="border-y border-border bg-secondary/40">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-border px-6 py-12 md:grid-cols-4 md:divide-x">
-          {stats.map((s, i) => (
-            <div key={s.label} className={i > 0 ? "md:pl-8" : ""}>
-              <div className="font-display text-4xl font-bold tracking-tight text-primary md:text-5xl">
-                {s.value}
-              </div>
-              <div className="mt-2 text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Engineered Services */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="mb-10">
-          <p className="eyebrow">Engineered Services</p>
-          <div className="mt-2 h-0.5 w-12 bg-primary" />
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-3">
-          <article className="group relative col-span-2 overflow-hidden rounded-lg bg-[oklch(0.25_0.02_220)] text-cream md:col-span-2">
-            <img
-              src={personalTraining}
-              alt="Personal training illustration"
-              loading="lazy"
-              width={1024}
-              height={768}
-              className="absolute inset-0 h-full w-full object-cover opacity-80"
-            />
-            <div className="relative flex h-full flex-col justify-end p-10">
-              <p className="eyebrow !text-accent">— Bespoke Programming</p>
-              <h3 className="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">
-                Bespoke Programming
-              </h3>
-              <p className="mt-3 max-w-md text-sm leading-relaxed text-cream/75">
-                One-on-one load management tailored to your neural output —
-                engineered around your biology, not a template.
-              </p>
-              <Link
-                to="/workouts"
-                className="mt-6 inline-flex items-center gap-1 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-accent"
-              >
-                The Protocol <ArrowUpRight className="h-3.5 w-3.5" />
-              </Link>
-            </div>
-          </article>
-
-          <article className="rounded-lg bg-card p-8 shadow-[var(--shadow-card)]">
-            <p className="eyebrow">— Diagnostics</p>
-            <h3 className="mt-3 font-display text-2xl font-semibold">Biometric Mapping</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              VO2 max and neural tracking to eliminate the guesswork of
-              progress. Data-led calibration of every protocol.
-            </p>
-            <ul className="mt-6 space-y-2.5 text-sm">
-              <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="h-4 w-4 text-primary" /> Biometric tagging
-              </li>
-              <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="h-4 w-4 text-primary" /> VO2 max mapping
-              </li>
-            </ul>
-            <Link
-              to="/workouts"
-              className="mt-7 block border-t border-primary pt-3 text-center text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-primary"
-            >
-              Laboratory Details
-            </Link>
-          </article>
-
-          <article className="rounded-lg bg-card p-8 shadow-[var(--shadow-card)]">
-            <p className="eyebrow">— Restoration</p>
-            <h3 className="mt-3 font-display text-2xl font-semibold">Systemic Restoration</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Cryotherapy and lymphatic drainage to down-regulate the nervous
-              system. Recovery treated with the same precision as performance.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2 text-[0.7rem] uppercase tracking-[0.15em]">
-              <span className="rounded border border-border bg-secondary px-3 py-1.5">Cryotherapy</span>
-              <span className="rounded border border-border bg-secondary px-3 py-1.5">Infrared</span>
-              <span className="rounded border border-border bg-secondary px-3 py-1.5">Lymphatic</span>
-            </div>
-          </article>
-
-          <article className="overflow-hidden rounded-lg md:col-span-2">
-            <img
-              src={recovery}
-              alt="Recovery sanctuary"
-              loading="lazy"
-              width={1024}
-              height={768}
-              className="h-full w-full object-cover"
-            />
-          </article>
-        </div>
-      </section>
-
-      {/* Thought Before Execution */}
-      <section className="bg-secondary/50">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-2 lg:py-32">
-          <div>
-            <p className="eyebrow">— The Philosophy</p>
-            <h2 className="mt-4 font-display text-5xl font-semibold leading-[1.02] md:text-6xl">
-              Reject the <em className="italic">Noise.</em>
-            </h2>
-            <p className="mt-8 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              In an industry obsessed with "more," we advocate for "better."
-              High-performance culture requires high-resolution recovery. Every
-              movement at Kinetic is a deliberate choice — not a repetitive
-              chore.
-            </p>
-            <Link
-              to="/philosophy"
-              className="mt-8 inline-flex items-center gap-3 border-b border-primary pb-1 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-primary"
-            >
-              The Full Protocol <span className="h-px w-8 bg-primary" />
-            </Link>
-          </div>
-          <div className="space-y-10">
-            {principles.map((p) => (
-              <div key={p.n} className="grid grid-cols-[auto_1fr] gap-6 border-b border-border pb-10 last:border-0 last:pb-0">
-                <span className="font-display text-4xl font-black leading-none text-primary md:text-5xl">
-                  {p.n}
-                </span>
+      {/* TRUST STATS BAR */}
+      <section className="border-y border-white/10 bg-[oklch(0.13_0_0)]">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-8 px-6 py-10 md:grid-cols-4 md:divide-x md:divide-white/10">
+          {stats.map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <div key={s.label} className={`flex items-center gap-4 ${i > 0 ? "md:pl-8" : ""}`}>
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-md border border-primary/30 bg-primary/10">
+                  <Icon className="h-5 w-5 text-primary" />
+                </div>
                 <div>
-                  <h4 className="font-display text-xl font-bold">{p.title}</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
+                  <div className="font-display text-2xl text-foreground md:text-3xl">{s.value}</div>
+                  <div className="text-[0.7rem] uppercase tracking-widest text-muted-foreground">{s.label}</div>
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
-        <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
+      {/* EXPLORE FACILITY — masonry */}
+      <section id="facility" className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="eyebrow">— The Inner Circle</p>
-            <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.05] md:text-5xl">
-              Member <em className="italic">Perspectives.</em>
-            </h2>
+            <p className="eyebrow">— The Facility</p>
+            <h2 className="mt-3 font-display text-4xl md:text-6xl">Explore Iron Forge</h2>
           </div>
-          <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Quiet observations from inside the sanctuary — six months and beyond.
+          <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
+            Step inside Sikar's most equipped gym floor. Premium machines, free weights,
+            and dedicated zones for every kind of training.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           {[
-            { q: "Kinetic didn't just change my physique; it changed how I approach my entire day. It's the difference between being 'tired' and being 'highly tuned'.", n: "Alexander Vance", r: "Performance Member · 18 mo" },
-            { q: "The 1:1 attention is unmatched. Marcus rebuilt my squat from the ground up — no plate ego, just precision and patience.", n: "Priya Shah", r: "Elite Member · 2 yr" },
-            { q: "I sleep deeper. I think clearer. The recovery suite alone is worth the membership — and a coach who actually reads your bloodwork.", n: "James Okafor", r: "Foundations Member · 8 mo" },
-          ].map((t) => (
-            <figure key={t.n} className="flex flex-col rounded-lg bg-card p-10 shadow-[var(--shadow-card)]">
-              <div className="font-display text-6xl italic leading-none text-primary">"</div>
-              <blockquote className="mt-6 flex-1 font-display text-lg italic leading-relaxed text-foreground/90">
-                {t.q}
-              </blockquote>
-              <figcaption className="mt-10 border-t border-border pt-5">
-                <div className="font-display text-base font-semibold">{t.n}</div>
-                <div className="mt-1.5 text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
-                  {t.r}
-                </div>
-              </figcaption>
+            { src: gymFloor1, alt: "Spacious gym floor with treadmills and benches in Sikar", span: "col-span-2 row-span-2 aspect-square md:aspect-auto" },
+            { src: gymRack, alt: "Power rack and squat zone at Iron Forge Sikar", span: "aspect-square" },
+            { src: gymCable, alt: "Cable cross-over machine at Sikar gym", span: "aspect-square" },
+            { src: gymBench, alt: "Adjustable bench and dumbbell zone", span: "aspect-square" },
+            { src: gymWood, alt: "Premium gym interior with wooden ceiling design", span: "aspect-square" },
+            { src: gymWindows, alt: "Natural light strength training area", span: "col-span-2 aspect-[2/1]" },
+            { src: gymCardio, alt: "Cardio section with elliptical and bike machines", span: "aspect-square" },
+            { src: gymPulley, alt: "Pulley and lat machine zone Sikar", span: "aspect-square" },
+          ].map((img) => (
+            <figure
+              key={img.alt}
+              className={`group relative overflow-hidden rounded-lg border border-white/10 bg-card ${img.span}`}
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </figure>
           ))}
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="bg-secondary/50">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[auto_1fr] lg:py-32">
-          <div>
-            <p className="eyebrow">— Frequently Asked</p>
-            <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.05] md:text-5xl">
-              Questions,<br /><em className="italic">answered.</em>
-            </h2>
+      {/* PROGRAMS */}
+      <section id="programs" className="border-y border-white/10 bg-[oklch(0.13_0_0)] py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-14 max-w-2xl">
+            <p className="eyebrow">— Our Programs</p>
+            <h2 className="mt-3 font-display text-4xl md:text-6xl">Train With Purpose</h2>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+              Whether your goal is fat loss, muscle, or just feeling better — we have a
+              proven program to get you there.
+            </p>
           </div>
-          <div className="divide-y divide-border">
-            {[
-              { q: "Do I need prior training experience to join?", a: "No. Every member begins with a movement assessment so your protocol is built around your current capacity, not someone else's." },
-              { q: "How is Kinetic different from a regular gym?", a: "We are a coached sanctuary, not an open gym. Membership includes bespoke programming, biometric mapping, and access to systemic restoration." },
-              { q: "Can I bring guests?", a: "Foundations members receive two guest passes monthly. Performance and Elite tiers include unlimited curated guest access by appointment." },
-              { q: "What is the cancellation policy?", a: "Memberships are month-to-month with a 30-day notice. We never lock anyone into a contract — discipline shouldn't require legal compulsion." },
-            ].map((f) => (
-              <details key={f.q} className="group py-6">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-xl font-semibold">
-                  {f.q}
-                  <span className="text-2xl text-primary transition group-open:rotate-45">+</span>
-                </summary>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
-              </details>
+
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {programs.map((p) => {
+              const Icon = p.icon;
+              return (
+                <article
+                  key={p.title}
+                  className="group relative overflow-hidden rounded-lg border border-white/10 bg-card p-7 transition hover:border-primary/40 hover:bg-card/80"
+                >
+                  <div className="grid h-12 w-12 place-items-center rounded-md bg-primary/15 text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-5 font-display text-2xl text-foreground">{p.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
+                  <div className="mt-6 h-px w-full bg-gradient-to-r from-primary/40 to-transparent" />
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section id="why" className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+          <div className="relative">
+            <img
+              src={gymRack}
+              alt="Premium yellow strength equipment at Iron Forge Sikar"
+              loading="lazy"
+              width={1024}
+              height={768}
+              className="aspect-[4/5] w-full rounded-lg object-cover shadow-[var(--shadow-card)]"
+            />
+            <div className="absolute -bottom-6 -right-6 hidden rounded-lg border border-primary/30 bg-primary px-6 py-5 text-primary-foreground shadow-[var(--shadow-glow)] md:block">
+              <div className="font-display text-3xl">4.9 ★</div>
+              <div className="text-[0.7rem] font-bold uppercase tracking-widest">Google Reviews</div>
+            </div>
+          </div>
+
+          <div>
+            <p className="eyebrow">— Why Iron Forge</p>
+            <h2 className="mt-3 font-display text-4xl md:text-5xl">Built For People Who Want Real Results</h2>
+            <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
+              We didn't build another crowded gym. We built Sikar's most equipped, cleanest,
+              best-coached fitness destination — for serious people of every level.
+            </p>
+            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+              {whyUs.map((w) => (
+                <li key={w} className="flex items-start gap-3 rounded-md border border-white/10 bg-card/60 p-4">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <span className="text-sm text-foreground/90">{w}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href={wa}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 text-xs font-bold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90"
+            >
+              <MessageCircle className="h-4 w-4" /> Book Your Free Trial
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="border-y border-white/10 bg-[oklch(0.13_0_0)] py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-12 max-w-2xl">
+            <p className="eyebrow">— Member Reviews</p>
+            <h2 className="mt-3 font-display text-4xl md:text-5xl">Real People. Real Results.</h2>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {reviews.map((r) => (
+              <figure
+                key={r.name}
+                className="flex flex-col rounded-lg border border-white/10 bg-card p-7"
+              >
+                <div className="flex gap-0.5">
+                  {Array.from({ length: r.stars }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                  ))}
+                </div>
+                <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-foreground/85">
+                  "{r.text}"
+                </blockquote>
+                <figcaption className="mt-6 border-t border-white/10 pt-4">
+                  <div className="font-display text-base text-foreground">{r.name}</div>
+                  <div className="mt-1 text-[0.7rem] uppercase tracking-widest text-muted-foreground">{r.role}</div>
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section style={{ backgroundColor: "oklch(0.22 0.008 250)" }}>
-        <div className="mx-auto max-w-3xl px-6 py-28 text-center md:py-36">
-          <p className="eyebrow" style={{ color: "oklch(0.55 0.09 160)" }}>— Membership</p>
-          <h2 className="mt-6 font-display text-4xl font-semibold leading-[1.05] md:text-6xl" style={{ color: "oklch(0.965 0.012 85)" }}>
-            Are you ready for<br /><em className="italic">refinement?</em>
-          </h2>
-          <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed" style={{ color: "oklch(0.78 0.015 85)" }}>
-            Limited availability for select personal coaching. Apply for
-            sanctuary membership today.
+      {/* PRICING */}
+      <section id="pricing" className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <div className="mb-14 text-center">
+          <p className="eyebrow">— Membership</p>
+          <h2 className="mt-3 font-display text-4xl md:text-6xl">Simple, Honest Pricing</h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
+            No hidden fees. No long contracts. Pick a plan, walk in, and start training.
           </p>
-          <Link
-            to="/memberships"
-            className="mt-10 inline-block rounded-md bg-primary px-9 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground shadow-lg transition-opacity hover:opacity-90"
-          >
-            Request an Invitation
-          </Link>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-3">
+          {pricing.map((p) => (
+            <article
+              key={p.name}
+              className={`relative flex flex-col rounded-lg border p-8 ${
+                p.featured
+                  ? "border-primary bg-card shadow-[var(--shadow-glow)]"
+                  : "border-white/10 bg-card"
+              }`}
+            >
+              {p.featured && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-[0.65rem] font-bold uppercase tracking-widest text-primary-foreground">
+                  Most Popular
+                </div>
+              )}
+              <h3 className="font-display text-2xl text-foreground">{p.name}</h3>
+              <div className="mt-4 flex items-baseline gap-1">
+                <span className="font-display text-5xl text-primary">₹{p.price}</span>
+                <span className="text-sm text-muted-foreground">{p.period}</span>
+              </div>
+              <ul className="mt-6 flex-1 space-y-3">
+                {p.perks.map((perk) => (
+                  <li key={perk} className="flex items-start gap-2 text-sm text-foreground/85">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                    {perk}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={wa}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`mt-8 block rounded-md px-5 py-3.5 text-center text-xs font-bold uppercase tracking-widest transition ${
+                  p.featured
+                    ? "bg-primary text-primary-foreground hover:opacity-90"
+                    : "border border-white/15 bg-white/5 text-foreground hover:border-primary/60 hover:text-primary"
+                }`}
+              >
+                {p.cta}
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* LOCATION */}
+      <section id="location" className="border-t border-white/10 bg-[oklch(0.13_0_0)]">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:py-28 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="eyebrow">— Visit Us</p>
+            <h2 className="mt-3 font-display text-4xl md:text-5xl">Walk In Today</h2>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
+              We're located on Piprali Road in Sikar — easy to find, easy to park.
+              Drop by anytime during open hours for a tour.
+            </p>
+            <ul className="mt-8 space-y-4 text-sm">
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-5 w-5 text-primary" />
+                <span className="text-foreground/90">
+                  Piprali Road, Near Subhash Chowk,<br />
+                  Sikar, Rajasthan 332001
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Clock className="mt-0.5 h-5 w-5 text-primary" />
+                <span className="text-foreground/90">
+                  Mon – Sat · 6:00 AM – 11:00 PM<br />
+                  Sunday · 7:00 AM – 1:00 PM
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="mt-0.5 h-5 w-5 text-primary" />
+                <a href="tel:+919876543210" className="text-foreground/90 hover:text-primary">
+                  +91 98765 43210
+                </a>
+              </li>
+            </ul>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Sikar+Rajasthan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 text-xs font-bold uppercase tracking-widest text-primary-foreground transition hover:opacity-90"
+              >
+                <MapPin className="h-4 w-4" /> Get Directions
+              </a>
+              <a
+                href={wa}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/5 px-6 py-3.5 text-xs font-bold uppercase tracking-widest text-foreground transition hover:border-primary/60 hover:text-primary"
+              >
+                <MessageCircle className="h-4 w-4" /> WhatsApp
+              </a>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-lg border border-white/10 shadow-[var(--shadow-card)]">
+            <iframe
+              title="Iron Forge Gym Sikar Location"
+              src="https://www.google.com/maps?q=Sikar,Rajasthan&output=embed"
+              width="100%"
+              height="450"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="block h-[420px] w-full grayscale-[0.3]"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="relative isolate overflow-hidden">
+        <img
+          src={gymWood}
+          alt="Iron Forge Sikar gym interior"
+          loading="lazy"
+          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/95 to-background" />
+        <div className="mx-auto max-w-3xl px-6 py-24 text-center md:py-32">
+          <h2 className="font-display text-4xl leading-tight md:text-6xl">
+            Your Transformation
+            <span className="block text-primary">Starts Today.</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-foreground/80 md:text-base">
+            Book a free trial session. Tour the facility. Meet the trainers.
+            No pressure, no commitment.
+          </p>
+          <div className="mt-9 flex flex-wrap justify-center gap-3">
+            <a
+              href={wa}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90"
+            >
+              <MessageCircle className="h-4 w-4" /> WhatsApp Now
+            </a>
+            <a
+              href="tel:+919876543210"
+              className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold uppercase tracking-widest text-foreground transition hover:border-primary/60 hover:text-primary"
+            >
+              <Phone className="h-4 w-4" /> Call +91 98765 43210
+            </a>
+          </div>
         </div>
       </section>
     </SiteLayout>
