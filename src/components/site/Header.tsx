@@ -1,14 +1,26 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Dumbbell, Crown, Users, MapPin, BookOpen, type LucideIcon } from "lucide-react";
 
-const nav = [
-  { to: "/workouts", label: "Workouts" },
-  { to: "/memberships", label: "Memberships" },
-  { to: "/coaches", label: "Coaches" },
-  { to: "/locations", label: "Locations" },
-  { to: "/philosophy", label: "Philosophy" },
-] as const;
+const nav: { to: string; label: string; icon: LucideIcon }[] = [
+  { to: "/workouts", label: "Workouts", icon: Dumbbell },
+  { to: "/memberships", label: "Memberships", icon: Crown },
+  { to: "/coaches", label: "Coaches", icon: Users },
+  { to: "/locations", label: "Locations", icon: MapPin },
+  { to: "/philosophy", label: "Philosophy", icon: BookOpen },
+];
+
+// Liquid-glass icon chip — translucent, frosted, with a subtle highlight
+const glassIcon =
+  "relative inline-flex h-7 w-7 items-center justify-center rounded-full " +
+  "border border-white/30 bg-white/10 backdrop-blur-md " +
+  "shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_4px_12px_-4px_rgba(0,0,0,0.18)] " +
+  "before:absolute before:inset-0 before:rounded-full " +
+  "before:bg-[radial-gradient(120%_80%_at_30%_15%,rgba(255,255,255,0.55),transparent_55%)] " +
+  "before:opacity-80 before:pointer-events-none " +
+  "after:absolute after:inset-px after:rounded-full " +
+  "after:bg-gradient-to-br after:from-primary/15 after:to-accent/10 after:pointer-events-none " +
+  "transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.55),0_6px_18px_-4px_color-mix(in_oklab,var(--primary)_35%,transparent)]";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -20,20 +32,26 @@ export function Header() {
           KINETIC
         </Link>
 
-        <nav className="hidden items-center gap-9 md:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="text-sm text-foreground/70 transition-colors hover:text-foreground"
-              activeProps={{
-                className:
-                  "text-sm text-primary font-medium border-b-2 border-primary pb-1 -mb-1",
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="hidden items-center gap-7 md:flex">
+          {nav.map((item) => {
+            const Icon = item.icon;
+            return (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="group flex items-center gap-2 text-sm text-foreground/70 transition-colors hover:text-foreground"
+                activeProps={{
+                  className:
+                    "group flex items-center gap-2 text-sm text-primary font-medium",
+                }}
+              >
+                <span className={glassIcon} aria-hidden="true">
+                  <Icon className="relative z-10 h-3.5 w-3.5 text-foreground/80 group-hover:text-primary" strokeWidth={2} />
+                </span>
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-2">
@@ -56,17 +74,26 @@ export function Header() {
       {open && (
         <nav className="border-t border-border bg-background md:hidden">
           <div className="mx-auto flex max-w-7xl flex-col px-6 py-4">
-            {nav.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                className="border-b border-border/50 py-3 text-sm font-medium"
-                activeProps={{ className: "border-b border-border/50 py-3 text-sm font-medium text-primary" }}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {nav.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setOpen(false)}
+                  className="group flex items-center gap-3 border-b border-border/50 py-3 text-sm font-medium"
+                  activeProps={{
+                    className:
+                      "group flex items-center gap-3 border-b border-border/50 py-3 text-sm font-medium text-primary",
+                  }}
+                >
+                  <span className={glassIcon} aria-hidden="true">
+                    <Icon className="relative z-10 h-3.5 w-3.5 text-foreground/80 group-hover:text-primary" strokeWidth={2} />
+                  </span>
+                  {item.label}
+                </Link>
+              );
+            })}
             <Link
               to="/memberships"
               onClick={() => setOpen(false)}
