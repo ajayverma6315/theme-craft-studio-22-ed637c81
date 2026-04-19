@@ -56,27 +56,27 @@ function HomePage() {
       <section className="relative overflow-hidden">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 pt-12 pb-20 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div>
-            <p className="eyebrow mb-6">— The Kinetic Way</p>
-            <h1 className="text-5xl font-black leading-[0.95] tracking-tight md:text-7xl">
-              PRECISION<br />IN MOTION.
+            <p className="eyebrow mb-6">— The Kinetic Protocol</p>
+            <h1 className="text-5xl font-semibold leading-[1.02] tracking-tight md:text-7xl">
+              The Apex of<br /><em className="italic">Human Engineering.</em>
             </h1>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              Welcome to the high-performance coaching sanctuary. We engineer
-              your peak physical blueprint through deliberate methodology and
-              elite 1:1 attention.
+            <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground">
+              Standard gyms focus on volume. We focus on your specific
+              biological blueprint. Experience 1:1 coaching where data meets
+              discipline.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-10 flex flex-wrap gap-3">
               <Link
                 to="/memberships"
-                className="rounded-md bg-gradient-to-br from-primary to-accent px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-opacity hover:opacity-90"
+                className="rounded-md bg-primary px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-sm transition-opacity hover:opacity-90"
               >
-                Start Your Journey
+                Request an Invitation
               </Link>
               <Link
                 to="/philosophy"
-                className="rounded-md border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+                className="rounded-md border border-border bg-card px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-secondary"
               >
-                View Methodology
+                The Protocol
               </Link>
             </div>
           </div>
@@ -125,56 +125,58 @@ function HomePage() {
               height={768}
               className="absolute inset-0 h-full w-full object-cover opacity-80"
             />
-            <div className="relative flex h-full flex-col justify-end p-8">
-              <p className="eyebrow !text-accent">— First Class</p>
-              <h3 className="mt-2 font-display text-3xl font-bold text-cream">Personal Training</h3>
-              <p className="mt-2 max-w-md text-sm leading-relaxed text-cream/70">
-                Tailored 1:1 coaching engineered for your exact physiological
-                needs and peak output.
+            <div className="relative flex h-full flex-col justify-end p-10">
+              <p className="eyebrow !text-accent">— Bespoke Programming</p>
+              <h3 className="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">
+                Bespoke Programming
+              </h3>
+              <p className="mt-3 max-w-md text-sm leading-relaxed text-cream/75">
+                One-on-one load management tailored to your neural output —
+                engineered around your biology, not a template.
               </p>
               <Link
                 to="/workouts"
-                className="mt-4 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest text-accent"
+                className="mt-6 inline-flex items-center gap-1 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-accent"
               >
-                Explore Coaching <ArrowUpRight className="h-3.5 w-3.5" />
+                The Protocol <ArrowUpRight className="h-3.5 w-3.5" />
               </Link>
             </div>
           </article>
 
-          <article className="rounded-lg bg-card p-7 shadow-[var(--shadow-card)]">
-            <div className="mb-4 inline-flex h-8 w-8 items-center justify-center rounded bg-primary" />
-            <h3 className="font-display text-xl font-bold">Performance Lab</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Advanced biometric testing, VO2 max analysis, and neural tracking to measure micro-progress.
+          <article className="rounded-lg bg-card p-8 shadow-[var(--shadow-card)]">
+            <p className="eyebrow">— Diagnostics</p>
+            <h3 className="mt-3 font-display text-2xl font-semibold">Biometric Mapping</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              VO2 max and neural tracking to eliminate the guesswork of
+              progress. Data-led calibration of every protocol.
             </p>
-            <ul className="mt-5 space-y-2 text-sm">
-              <li className="flex items-center gap-2">
+            <ul className="mt-6 space-y-2.5 text-sm">
+              <li className="flex items-center gap-2.5">
                 <CheckCircle2 className="h-4 w-4 text-primary" /> Biometric tagging
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2.5">
                 <CheckCircle2 className="h-4 w-4 text-primary" /> VO2 max mapping
               </li>
             </ul>
             <Link
               to="/workouts"
-              className="mt-6 block border-t border-primary pt-3 text-center text-xs font-semibold uppercase tracking-widest text-primary"
+              className="mt-7 block border-t border-primary pt-3 text-center text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-primary"
             >
               Laboratory Details
             </Link>
           </article>
 
-          <article className="rounded-lg bg-card p-7 shadow-[var(--shadow-card)]">
+          <article className="rounded-lg bg-card p-8 shadow-[var(--shadow-card)]">
             <p className="eyebrow">— Restoration</p>
-            <h3 className="mt-2 font-display text-2xl font-bold">The Recovery Sanctuary</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              High-performance culture demands elite recovery. Our sanctuary
-              features cryo &amp; plunge therapy, infrared sauna, and lymphatic
-              drainage.
+            <h3 className="mt-3 font-display text-2xl font-semibold">Systemic Restoration</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Cryotherapy and lymphatic drainage to down-regulate the nervous
+              system. Recovery treated with the same precision as performance.
             </p>
-            <div className="mt-4 flex flex-wrap gap-2 text-xs">
-              <span className="rounded border border-border bg-secondary px-3 py-1">Cryotherapy</span>
-              <span className="rounded border border-border bg-secondary px-3 py-1">Infrared</span>
-              <span className="rounded border border-border bg-secondary px-3 py-1">Massage</span>
+            <div className="mt-5 flex flex-wrap gap-2 text-[0.7rem] uppercase tracking-[0.15em]">
+              <span className="rounded border border-border bg-secondary px-3 py-1.5">Cryotherapy</span>
+              <span className="rounded border border-border bg-secondary px-3 py-1.5">Infrared</span>
+              <span className="rounded border border-border bg-secondary px-3 py-1.5">Lymphatic</span>
             </div>
           </article>
 
@@ -195,19 +197,21 @@ function HomePage() {
       <section className="bg-secondary/50">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-2 lg:py-32">
           <div>
-            <h2 className="font-display text-4xl font-black leading-[1] md:text-5xl">
-              THOUGHT<br />BEFORE<br />EXECUTION.
+            <p className="eyebrow">— The Philosophy</p>
+            <h2 className="mt-4 font-display text-5xl font-semibold leading-[1.02] md:text-6xl">
+              Reject the <em className="italic">Noise.</em>
             </h2>
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              We reject the "more is more" philosophy of modern fitness. True
-              kinetic mastery comes from deliberate, precise intention in every
-              single contraction.
+            <p className="mt-8 max-w-sm text-sm leading-relaxed text-muted-foreground">
+              In an industry obsessed with "more," we advocate for "better."
+              High-performance culture requires high-resolution recovery. Every
+              movement at Kinetic is a deliberate choice — not a repetitive
+              chore.
             </p>
             <Link
               to="/philosophy"
-              className="mt-6 inline-flex items-center gap-3 border-b border-primary pb-1 text-sm font-medium text-primary"
+              className="mt-8 inline-flex items-center gap-3 border-b border-primary pb-1 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-primary"
             >
-              Our Philosophy <span className="h-px w-8 bg-primary" />
+              The Full Protocol <span className="h-px w-8 bg-primary" />
             </Link>
           </div>
           <div className="space-y-10">
