@@ -10,17 +10,28 @@ const nav: { to: string; label: string; icon: LucideIcon }[] = [
   { to: "/philosophy", label: "Philosophy", icon: BookOpen },
 ];
 
-// Liquid-glass icon chip — translucent, frosted, with a subtle highlight
+// Apple-style liquid glass icon chip
+// Layers: frosted backdrop · refractive tint · specular top highlight ·
+// inner ring · soft outer halo on hover
 const glassIcon =
-  "relative inline-flex h-7 w-7 items-center justify-center rounded-full " +
-  "border border-white/30 bg-white/10 backdrop-blur-md " +
-  "shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_4px_12px_-4px_rgba(0,0,0,0.18)] " +
-  "before:absolute before:inset-0 before:rounded-full " +
-  "before:bg-[radial-gradient(120%_80%_at_30%_15%,rgba(255,255,255,0.55),transparent_55%)] " +
-  "before:opacity-80 before:pointer-events-none " +
-  "after:absolute after:inset-px after:rounded-full " +
-  "after:bg-gradient-to-br after:from-primary/15 after:to-accent/10 after:pointer-events-none " +
-  "transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.55),0_6px_18px_-4px_color-mix(in_oklab,var(--primary)_35%,transparent)]";
+  // base shape
+  "relative inline-flex h-8 w-8 items-center justify-center rounded-full isolate " +
+  // frosted glass backdrop (saturates whatever is behind it)
+  "bg-white/15 backdrop-blur-xl backdrop-saturate-150 " +
+  // crisp inner ring + soft outer shadow
+  "ring-1 ring-white/40 " +
+  "shadow-[inset_0_1px_1px_rgba(255,255,255,0.7),inset_0_-1px_2px_rgba(0,0,0,0.08),0_6px_20px_-8px_rgba(15,23,42,0.35)] " +
+  // top specular highlight (the classic Apple glossy arc)
+  "before:absolute before:inset-0 before:rounded-full before:pointer-events-none " +
+  "before:bg-[radial-gradient(130%_70%_at_30%_10%,rgba(255,255,255,0.85),rgba(255,255,255,0.15)_45%,transparent_70%)] " +
+  "before:opacity-90 " +
+  // refractive tint underlay (cool teal sheen)
+  "after:absolute after:inset-0 after:rounded-full after:pointer-events-none after:-z-10 " +
+  "after:bg-[conic-gradient(from_220deg_at_50%_50%,color-mix(in_oklab,var(--primary)_18%,transparent),transparent_40%,color-mix(in_oklab,var(--accent)_22%,transparent)_70%,transparent)] " +
+  // hover: deeper glow + halo
+  "transition-all duration-300 ease-out " +
+  "group-hover:ring-primary/50 group-hover:bg-white/25 " +
+  "group-hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.85),inset_0_-1px_2px_rgba(0,0,0,0.08),0_10px_28px_-8px_color-mix(in_oklab,var(--primary)_55%,transparent)]";
 
 export function Header() {
   const [open, setOpen] = useState(false);
