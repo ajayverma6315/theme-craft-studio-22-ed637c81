@@ -13,6 +13,7 @@ import { Route as WorkoutsRouteImport } from './routes/workouts'
 import { Route as PhilosophyRouteImport } from './routes/philosophy'
 import { Route as MembershipsRouteImport } from './routes/memberships'
 import { Route as LocationsRouteImport } from './routes/locations'
+import { Route as CoachesRouteImport } from './routes/coaches'
 import { Route as IndexRouteImport } from './routes/index'
 
 const WorkoutsRoute = WorkoutsRouteImport.update({
@@ -35,6 +36,11 @@ const LocationsRoute = LocationsRouteImport.update({
   path: '/locations',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CoachesRoute = CoachesRouteImport.update({
+  id: '/coaches',
+  path: '/coaches',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,6 +49,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/coaches': typeof CoachesRoute
   '/locations': typeof LocationsRoute
   '/memberships': typeof MembershipsRoute
   '/philosophy': typeof PhilosophyRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/coaches': typeof CoachesRoute
   '/locations': typeof LocationsRoute
   '/memberships': typeof MembershipsRoute
   '/philosophy': typeof PhilosophyRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/coaches': typeof CoachesRoute
   '/locations': typeof LocationsRoute
   '/memberships': typeof MembershipsRoute
   '/philosophy': typeof PhilosophyRoute
@@ -65,12 +74,25 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/locations' | '/memberships' | '/philosophy' | '/workouts'
+  fullPaths:
+    | '/'
+    | '/coaches'
+    | '/locations'
+    | '/memberships'
+    | '/philosophy'
+    | '/workouts'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/locations' | '/memberships' | '/philosophy' | '/workouts'
+  to:
+    | '/'
+    | '/coaches'
+    | '/locations'
+    | '/memberships'
+    | '/philosophy'
+    | '/workouts'
   id:
     | '__root__'
     | '/'
+    | '/coaches'
     | '/locations'
     | '/memberships'
     | '/philosophy'
@@ -79,6 +101,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CoachesRoute: typeof CoachesRoute
   LocationsRoute: typeof LocationsRoute
   MembershipsRoute: typeof MembershipsRoute
   PhilosophyRoute: typeof PhilosophyRoute
@@ -115,6 +138,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocationsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/coaches': {
+      id: '/coaches'
+      path: '/coaches'
+      fullPath: '/coaches'
+      preLoaderRoute: typeof CoachesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -127,6 +157,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CoachesRoute: CoachesRoute,
   LocationsRoute: LocationsRoute,
   MembershipsRoute: MembershipsRoute,
   PhilosophyRoute: PhilosophyRoute,
@@ -135,3 +166,12 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
