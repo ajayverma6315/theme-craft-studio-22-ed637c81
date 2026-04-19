@@ -35,17 +35,17 @@ const principles = [
   {
     n: "01",
     title: "Neural Priming",
-    body: "Preparing the central nervous system for efficient output through specific mobility and cognitive intent before any movement is loaded.",
+    body: "Preparing the central nervous system for efficient output through specific mobility and cognitive intent before any load is introduced.",
   },
   {
     n: "02",
     title: "Load Management",
-    body: "Utilizing precise tracking to ensure every set is calibrated to your current state, preventing plateaus and overreaching.",
+    body: "Precise tracking calibrates every set to your current state — preventing plateaus and overreaching with surgical accuracy.",
   },
   {
     n: "03",
     title: "Systemic Reset",
-    body: "Integrating deep neuro-muscular system down-regulation as a non-negotiable closing ritual for every session.",
+    body: "Deep neuro-muscular down-regulation as a non-negotiable closing ritual. Recovery is engineered, never assumed.",
   },
 ];
 
