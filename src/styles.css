@@ -33,7 +33,7 @@
   --color-cream-deep: var(--cream-deep);
   --color-teal: var(--teal);
   --color-teal-bright: var(--teal-bright);
-  --font-display: "Archivo", system-ui, sans-serif;
+  --font-display: "Playfair Display", "Cormorant Garamond", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
 }
 
@@ -124,12 +124,13 @@
 
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
+    font-weight: 600;
   }
 
   .font-display {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
   }
 
   .eyebrow {
