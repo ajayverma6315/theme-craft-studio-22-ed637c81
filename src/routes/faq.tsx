@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "What are your gym timings?",
-    a: "VK Crossfit Gym is open Monday to Saturday from 5:00 AM to 11:00 PM. Contact us on WhatsApp for updated Sunday and holiday timings.",
+    a: "VK Crossfit Gym is open Monday to Saturday from 5:00 AM to 9:00 PM. Contact us on WhatsApp for updated Sunday and holiday timings.",
   },
   {
     q: "Is there a free trial available?",

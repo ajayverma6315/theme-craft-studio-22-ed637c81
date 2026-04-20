@@ -408,22 +408,21 @@ function HomePage() {
             <p className="eyebrow">— Visit Us</p>
             <h2 className="mt-3 font-display text-4xl md:text-5xl">Walk In Today</h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
-              We're located on Piprali Road in Sikar — easy to find, easy to park.
-              Drop by anytime during open hours for a tour.
+              We're on Piprali Road, near Dhanvantari Ayurvedic College, Jaldhari Nagar — easy to find, easy to park. Drop by anytime during open hours for a tour.
             </p>
             <ul className="mt-8 space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 text-primary" />
                 <span className="text-foreground/90">
-                  Piprali Road, Near Subhash Chowk,<br />
-                  Sikar, Rajasthan 332001
+                  Piprali Rd, near Dhanvantari Ayurvedic College,<br />
+                  Jaldhari Nagar, Sikar, Rajasthan 332001
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="mt-0.5 h-5 w-5 text-primary" />
                 <span className="text-foreground/90">
-                  Mon – Sat · 6:00 AM – 11:00 PM<br />
-                  Sunday · 7:00 AM – 1:00 PM
+                  Mon – Sat · 5:00 AM – 9:00 PM<br />
+                  Sunday · By appointment
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -435,7 +434,7 @@ function HomePage() {
             </ul>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=Sikar+Rajasthan"
+                href="https://www.google.com/maps/dir/?api=1&destination=Vk+Crossfit+Gym+Sikar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 text-xs font-bold uppercase tracking-widest text-primary-foreground transition hover:opacity-90"
@@ -454,8 +453,8 @@ function HomePage() {
           </div>
           <div className="overflow-hidden rounded-lg border border-white/10 shadow-[var(--shadow-card)]">
             <iframe
-              title="VK Crossfit Gym Gym Sikar Location"
-              src="https://www.google.com/maps?q=Sikar,Rajasthan&output=embed"
+              title="VK Crossfit Gym Sikar Location"
+              src="https://www.google.com/maps?q=Vk+Crossfit+Gym+Sikar+Piprali+Road&output=embed"
               width="100%"
               height="450"
               loading="lazy"
