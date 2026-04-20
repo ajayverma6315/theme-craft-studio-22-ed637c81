@@ -35,10 +35,10 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <span className="grid h-9 w-9 place-items-center rounded-md bg-primary font-display text-lg font-bold text-primary-foreground">
-            IF
+            LF
           </span>
           <span className="font-display text-xl tracking-wider text-foreground">
-            IRON <span className="text-primary">FORGE</span>
+            LEGACY <span className="text-primary">FITNESS</span>
           </span>
         </Link>
 
