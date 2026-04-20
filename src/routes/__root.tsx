@@ -2,14 +2,15 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 
 import appCss from "../styles.css?url";
 
-const SITE_TITLE = "Best Gym in Sikar | VK Crossfit Gym — Premium Gym Sikar Rajasthan";
+const SITE_TITLE = "VK Crossfit Gym Sikar | Best Premium Gym in Sikar Rajasthan";
 const SITE_DESC =
-  "VK Crossfit Gym is Sikar's premium gym for real results. Imported equipment, certified trainers, weight loss & muscle gain programs. Open 6 AM – 11 PM. Join free trial.";
+  "VK Crossfit Gym — Sikar's premium unisex gym on Piprali Road. CrossFit, strength, cardio, yoga & personal training. Rated 4.9★ on Google. Open till 9 PM. Book a free trial.";
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "HealthClub",
-  name: "VK Crossfit Gym — Premium Gym Sikar",
+  name: "VK Crossfit Gym",
+  alternateName: "VK Fitness Sikar",
   image: "https://theme-craft-studio-22.lovable.app/og.jpg",
   "@id": "https://theme-craft-studio-22.lovable.app/",
   url: "https://theme-craft-studio-22.lovable.app/",
@@ -17,22 +18,30 @@ const localBusinessJsonLd = {
   priceRange: "₹₹",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Piprali Road",
+    streetAddress: "Piprali Rd, near Dhanvantari Ayurvedic College, Jaldhari Nagar",
     addressLocality: "Sikar",
     addressRegion: "Rajasthan",
     postalCode: "332001",
     addressCountry: "IN",
   },
-  geo: { "@type": "GeoCoordinates", latitude: 27.6094, longitude: 75.1399 },
+  geo: { "@type": "GeoCoordinates", latitude: 27.5996, longitude: 75.1370 },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-      opens: "06:00",
-      closes: "23:00",
+      dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      opens: "05:00",
+      closes: "21:00",
     },
   ],
-  sameAs: ["https://www.instagram.com/"],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "278",
+  },
+  sameAs: [
+    "https://www.instagram.com/vkfittness/",
+    "https://www.facebook.com/100094321773513/",
+  ],
 };
 
 function NotFoundComponent() {
