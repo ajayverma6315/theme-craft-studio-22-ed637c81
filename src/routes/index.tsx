@@ -30,13 +30,13 @@ import gymPulley from "@/assets/gym-pulley.webp";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Best Gym in Sikar | Iron Forge Fitness — Premium Gym Sikar Rajasthan" },
+      { title: "Best Gym in Sikar | Legacy Fitness — Premium Gym Sikar Rajasthan" },
       {
         name: "description",
         content:
-          "Iron Forge is Sikar's premium gym. Imported equipment, certified trainers, weight loss & muscle gain programs. Open 6 AM – 11 PM. Book a free trial today.",
+          "Legacy Fitness is Sikar's premium gym. Imported equipment, certified trainers, weight loss & muscle gain programs. Open 6 AM – 11 PM. Book a free trial today.",
       },
-      { property: "og:title", content: "Iron Forge — Best Premium Gym in Sikar" },
+      { property: "og:title", content: "Legacy Fitness — Best Premium Gym in Sikar" },
       {
         property: "og:description",
         content: "Real results, real equipment, real coaches in Sikar, Rajasthan.",
@@ -89,7 +89,7 @@ const reviews = [
     name: "Vikram Singh",
     role: "Member · 2 years",
     stars: 5,
-    text: "I've tried 3 gyms in Sikar — Iron Forge is in a different league. Imported machines, AC, music, and coaches who care. Worth every rupee.",
+    text: "I've tried 3 gyms in Sikar — Legacy Fitness is in a different league. Imported machines, AC, music, and coaches who care. Worth every rupee.",
   },
 ];
 
@@ -118,7 +118,7 @@ const pricing = [
   },
 ];
 
-const wa = "https://wa.me/919876543210?text=Hi%20Iron%20Forge%2C%20I%20want%20to%20book%20a%20free%20trial.";
+const wa = "https://wa.me/919876543210?text=Hi%20Legacy%20Fitness%2C%20I%20want%20to%20book%20a%20free%20trial.";
 
 function HomePage() {
   return (
@@ -127,7 +127,7 @@ function HomePage() {
       <section className="relative isolate overflow-hidden">
         <img
           src={gymYellow}
-          alt="Iron Forge premium gym floor in Sikar with yellow strength equipment"
+          alt="Legacy Fitness premium gym floor in Sikar with yellow strength equipment"
           width={1600}
           height={1067}
           fetchPriority="high"
@@ -202,7 +202,7 @@ function HomePage() {
         <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="eyebrow">— The Facility</p>
-            <h2 className="mt-3 font-display text-4xl md:text-6xl">Explore Iron Forge</h2>
+            <h2 className="mt-3 font-display text-4xl md:text-6xl">Explore Legacy Fitness</h2>
           </div>
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
             Step inside Sikar's most equipped gym floor. Premium machines, free weights,
@@ -213,7 +213,7 @@ function HomePage() {
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           {[
             { src: gymFloor1, alt: "Spacious gym floor with treadmills and benches in Sikar", span: "col-span-2 row-span-2 aspect-square md:aspect-auto" },
-            { src: gymRack, alt: "Power rack and squat zone at Iron Forge Sikar", span: "aspect-square" },
+            { src: gymRack, alt: "Power rack and squat zone at Legacy Fitness Sikar", span: "aspect-square" },
             { src: gymCable, alt: "Cable cross-over machine at Sikar gym", span: "aspect-square" },
             { src: gymBench, alt: "Adjustable bench and dumbbell zone", span: "aspect-square" },
             { src: gymWood, alt: "Premium gym interior with wooden ceiling design", span: "aspect-square" },
@@ -276,7 +276,7 @@ function HomePage() {
           <div className="relative">
             <img
               src={gymRack}
-              alt="Premium yellow strength equipment at Iron Forge Sikar"
+              alt="Premium yellow strength equipment at Legacy Fitness Sikar"
               loading="lazy"
               width={1024}
               height={768}
@@ -289,7 +289,7 @@ function HomePage() {
           </div>
 
           <div>
-            <p className="eyebrow">— Why Iron Forge</p>
+            <p className="eyebrow">— Why Legacy Fitness</p>
             <h2 className="mt-3 font-display text-4xl md:text-5xl">Built For People Who Want Real Results</h2>
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
               We didn't build another crowded gym. We built Sikar's most equipped, cleanest,
@@ -454,7 +454,7 @@ function HomePage() {
           </div>
           <div className="overflow-hidden rounded-lg border border-white/10 shadow-[var(--shadow-card)]">
             <iframe
-              title="Iron Forge Gym Sikar Location"
+              title="Legacy Fitness Gym Sikar Location"
               src="https://www.google.com/maps?q=Sikar,Rajasthan&output=embed"
               width="100%"
               height="450"
@@ -470,7 +470,7 @@ function HomePage() {
       <section className="relative isolate overflow-hidden">
         <img
           src={gymWood}
-          alt="Iron Forge Sikar gym interior"
+          alt="Legacy Fitness Sikar gym interior"
           loading="lazy"
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-30"
         />

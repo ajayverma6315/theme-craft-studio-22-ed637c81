@@ -72,7 +72,7 @@ export function Header() {
             <Phone className="h-3.5 w-3.5" /> Call
           </a>
           <a
-            href="https://wa.me/919876543210?text=Hi%20Iron%20Forge%2C%20I%20want%20to%20book%20a%20free%20trial."
+            href="https://wa.me/919876543210?text=Hi%20Legacy%20Fitness%2C%20I%20want%20to%20book%20a%20free%20trial."
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-md bg-primary px-5 py-2 text-xs font-bold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90 sm:inline-block"

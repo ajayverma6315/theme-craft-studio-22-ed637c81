@@ -11,9 +11,9 @@ import gymBench from "@/assets/gym-bench.webp";
 const posts = [
   {
     slug: "best-gym-in-sikar",
-    title: "Why Iron Forge is the Best Gym in Sikar for Real Results",
+    title: "Why Legacy Fitness is the Best Gym in Sikar for Real Results",
     excerpt:
-      "From imported equipment to certified trainers — here's what makes Iron Forge the most trusted premium gym in Sikar for serious transformations.",
+      "From imported equipment to certified trainers — here's what makes Legacy Fitness the most trusted premium gym in Sikar for serious transformations.",
     image: gymFloor,
     date: "April 2026",
     tag: "Gym Guide",
@@ -68,13 +68,13 @@ const posts = [
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Fitness Blog | Best Gym in Sikar — Iron Forge Fitness" },
+      { title: "Fitness Blog | Best Gym in Sikar — Legacy Fitness" },
       {
         name: "description",
         content:
-          "Fitness, weight loss, muscle gain and training guides from Iron Forge — Sikar's premium gym. Real advice from certified trainers.",
+          "Fitness, weight loss, muscle gain and training guides from Legacy Fitness — Sikar's premium gym. Real advice from certified trainers.",
       },
-      { property: "og:title", content: "Iron Forge Blog — Sikar's Premium Gym" },
+      { property: "og:title", content: "Legacy Fitness Blog — Sikar's Premium Gym" },
       {
         property: "og:description",
         content: "Workout, nutrition and transformation guides from Sikar's top trainers.",
@@ -91,7 +91,7 @@ function BlogPage() {
       <section className="border-b border-white/10 bg-gradient-to-b from-charcoal/60 to-background">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-            Iron Forge Journal
+            Legacy Fitness Journal
           </p>
           <h1 className="mt-4 font-display text-4xl uppercase leading-[0.95] tracking-tight text-foreground md:text-6xl">
             Train Smarter. <span className="text-primary">Live Stronger.</span>
@@ -180,11 +180,11 @@ function BlogPage() {
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-foreground/70">
             Book a free trial session at Sikar's premium gym and experience the
-            Iron Forge difference in person.
+            Legacy Fitness difference in person.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href="https://wa.me/919876543210?text=Hi%20Iron%20Forge%2C%20I%20want%20a%20free%20trial."
+              href="https://wa.me/919876543210?text=Hi%20Legacy%20Fitness%2C%20I%20want%20a%20free%20trial."
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-md bg-primary px-7 py-3.5 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90"

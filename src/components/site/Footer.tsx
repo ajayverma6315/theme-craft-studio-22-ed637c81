@@ -59,7 +59,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs uppercase tracking-widest text-muted-foreground md:flex-row">
-          <p>© {new Date().getFullYear()} Iron Forge Fitness, Sikar. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Legacy Fitness, Sikar. All rights reserved.</p>
           <p>Best Gym in Sikar · Premium Fitness Center</p>
         </div>
       </div>
