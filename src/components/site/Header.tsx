@@ -2,13 +2,16 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 
-const nav = [
-  { href: "#facility", label: "Facility" },
-  { href: "#programs", label: "Programs" },
-  { href: "#why", label: "Why Us" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#location", label: "Location" },
+const hashNav = [
+  { href: "/#facility", label: "Facility" },
+  { href: "/#programs", label: "Programs" },
+  { href: "/#pricing", label: "Pricing" },
 ];
+
+const routeNav = [
+  { to: "/blog", label: "Blog" },
+  { to: "/faq", label: "FAQ" },
+] as const;
 
 export function Header() {
   const [open, setOpen] = useState(false);
