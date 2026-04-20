@@ -15,13 +15,13 @@ const insights = [
   {
     tag: "Beginners",
     title: "Best Gym in Sikar for Beginners",
-    body: "Starting fitness can feel confusing. Legacy Fitness makes it simple with trainer guidance, clean equipment, and beginner-friendly support. If you need the best gym in Sikar for beginners, this is where consistency starts.",
+    body: "Starting fitness can feel confusing. VK Crossfit Gym makes it simple with trainer guidance, clean equipment, and beginner-friendly support. If you need the best gym in Sikar for beginners, this is where consistency starts.",
     image: gymFloor,
   },
   {
     tag: "Gym Guide",
     title: "How to Choose the Best Gym in Sikar",
-    body: "Choose a gym with certified trainers, clean environment, proper equipment, flexible timings, and motivating members. Legacy Fitness combines all of these in one premium fitness center in Sikar.",
+    body: "Choose a gym with certified trainers, clean environment, proper equipment, flexible timings, and motivating members. VK Crossfit Gym combines all of these in one premium fitness center in Sikar.",
     image: gymWindows,
   },
   {
@@ -33,7 +33,7 @@ const insights = [
   {
     tag: "Weight Loss",
     title: "Best Weight Loss Gym in Sikar",
-    body: "For fat loss, you need more than treadmills. Legacy Fitness combines strength training, cardio, structured routines, and accountability to help members lose fat effectively.",
+    body: "For fat loss, you need more than treadmills. VK Crossfit Gym combines strength training, cardio, structured routines, and accountability to help members lose fat effectively.",
     image: gymCardio,
   },
   {
@@ -71,13 +71,13 @@ const insights = [
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Fitness Insights | Best Gym in Sikar | Legacy Fitness" },
+      { title: "Fitness Insights | Best Gym in Sikar | VK Crossfit Gym" },
       {
         name: "description",
         content:
-          "Fitness insights from Legacy Fitness — Sikar's premium gym. Read guides on beginners, weight loss, muscle gain, personal training and choosing the best gym in Sikar.",
+          "Fitness insights from VK Crossfit Gym — Sikar's premium gym. Read guides on beginners, weight loss, muscle gain, personal training and choosing the best gym in Sikar.",
       },
-      { property: "og:title", content: "Fitness Insights | Legacy Fitness, Sikar" },
+      { property: "og:title", content: "Fitness Insights | VK Crossfit Gym, Sikar" },
       {
         property: "og:description",
         content:
@@ -103,7 +103,7 @@ function BlogPage() {
           </h1>
           <p className="mt-5 max-w-2xl text-base text-foreground/70 md:text-lg">
             Honest guides on choosing a gym, losing fat, building muscle and
-            training the right way — from the team at Legacy Fitness, Sikar.
+            training the right way — from the team at VK Crossfit Gym, Sikar.
           </p>
         </div>
       </section>
@@ -132,7 +132,7 @@ function BlogPage() {
               </h2>
               <p className="mt-4 leading-relaxed text-foreground/75">{featured.body}</p>
               <a
-                href="https://wa.me/919876543210?text=Hi%20Legacy%20Fitness%2C%20I%20want%20to%20join."
+                href="https://wa.me/918005706894?text=Hi%20VK%20Crossfit%20Gym%2C%20I%20want%20to%20join."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex w-fit items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90"
@@ -178,18 +178,18 @@ function BlogPage() {
       <section className="border-t border-white/10 bg-charcoal/30">
         <div className="mx-auto max-w-4xl px-5 py-16 text-center md:px-8 md:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-            Join Legacy Fitness Today
+            Join VK Crossfit Gym Today
           </p>
           <h2 className="mt-4 font-display text-3xl uppercase tracking-tight text-foreground md:text-5xl">
             Searching for gyms in Sikar? <span className="text-primary">Start here.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-foreground/70">
             If you are searching for gyms in Sikar, a premium fitness center, or
-            the best gym in Sikar — visit Legacy Fitness and start today.
+            the best gym in Sikar — visit VK Crossfit Gym and start today.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href="https://wa.me/919876543210?text=Hi%20Legacy%20Fitness%2C%20I%20want%20a%20free%20trial."
+              href="https://wa.me/918005706894?text=Hi%20VK%20Crossfit%20Gym%2C%20I%20want%20a%20free%20trial."
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-md bg-primary px-7 py-3.5 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90"

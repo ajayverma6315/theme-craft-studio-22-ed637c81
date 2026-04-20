@@ -5,8 +5,8 @@ import { Plus, Minus, MessageCircle, Phone } from "lucide-react";
 
 const faqs = [
   {
-    q: "Why is Legacy Fitness considered one of the best gyms in Sikar?",
-    a: "Legacy Fitness is known for premium imported equipment, certified trainers, clean facilities, a motivating atmosphere, and real transformation-focused training. If you're searching for the best gym in Sikar, we provide the complete environment for results.",
+    q: "Why is VK Crossfit Gym considered one of the best gyms in Sikar?",
+    a: "VK Crossfit Gym is known for premium imported equipment, certified trainers, clean facilities, a motivating atmosphere, and real transformation-focused training. If you're searching for the best gym in Sikar, we provide the complete environment for results.",
   },
   {
     q: "What membership plans do you offer?",
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "What are your gym timings?",
-    a: "Legacy Fitness is open Monday to Saturday from 5:00 AM to 11:00 PM. Contact us on WhatsApp for updated Sunday and holiday timings.",
+    a: "VK Crossfit Gym is open Monday to Saturday from 5:00 AM to 11:00 PM. Contact us on WhatsApp for updated Sunday and holiday timings.",
   },
   {
     q: "Is there a free trial available?",
@@ -41,8 +41,8 @@ const faqs = [
     a: "Yes. We create customized muscle building programs focused on hypertrophy, progressive overload, recovery, and nutrition support.",
   },
   {
-    q: "Is Legacy Fitness a good gym near me in Sikar?",
-    a: "If you're searching for a gym near me in Sikar, Legacy Fitness is a trusted choice for quality training, modern facilities, and convenient access on Piprali Road.",
+    q: "Is VK Crossfit Gym a good gym near me in Sikar?",
+    a: "If you're searching for a gym near me in Sikar, VK Crossfit Gym is a trusted choice for quality training, modern facilities, and convenient access on Piprali Road.",
   },
   {
     q: "Do you have memberships for women?",
@@ -50,14 +50,14 @@ const faqs = [
   },
   {
     q: "Where are you located?",
-    a: "Legacy Fitness is located on Piprali Road, Sikar, Rajasthan. Contact us on WhatsApp for exact directions and the nearest route.",
+    a: "VK Crossfit Gym is located on Piprali Road, Sikar, Rajasthan. Contact us on WhatsApp for exact directions and the nearest route.",
   },
   {
-    q: "How can I join Legacy Fitness?",
+    q: "How can I join VK Crossfit Gym?",
     a: "You can visit the gym directly, call us, or message us on WhatsApp to join today. Walk-ins are welcome between 5 AM and 11 PM.",
   },
   {
-    q: "Why choose Legacy Fitness over other gyms in Sikar?",
+    q: "Why choose VK Crossfit Gym over other gyms in Sikar?",
     a: "We focus on results, coaching quality, premium atmosphere, hygiene, and member support. That is why many people consider us among the best gyms in Sikar.",
   },
 ];
@@ -75,13 +75,13 @@ const faqJsonLd = {
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — Best Gym in Sikar | Legacy Fitness" },
+      { title: "FAQ — Best Gym in Sikar | VK Crossfit Gym" },
       {
         name: "description",
         content:
-          "Common questions about Legacy Fitness — Sikar's premium gym. Membership plans, timings, personal training, free trial, women's fitness and more.",
+          "Common questions about VK Crossfit Gym — Sikar's premium gym. Membership plans, timings, personal training, free trial, women's fitness and more.",
       },
-      { property: "og:title", content: "FAQ — Legacy Fitness, Sikar" },
+      { property: "og:title", content: "FAQ — VK Crossfit Gym, Sikar" },
       {
         property: "og:description",
         content: "Everything you need to know about joining Sikar's premium gym.",
@@ -157,7 +157,7 @@ function FaqPage() {
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href="https://wa.me/919876543210?text=Hi%20Legacy%20Fitness%2C%20I%20have%20a%20question."
+              href="https://wa.me/918005706894?text=Hi%20VK%20Crossfit%20Gym%2C%20I%20have%20a%20question."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90"
@@ -165,10 +165,10 @@ function FaqPage() {
               <MessageCircle className="h-4 w-4" /> WhatsApp Now
             </a>
             <a
-              href="tel:+919876543210"
+              href="tel:+918005706894"
               className="inline-flex items-center justify-center gap-2 rounded-md border border-white/15 bg-white/5 px-6 py-3 text-sm font-bold uppercase tracking-widest text-foreground transition hover:border-primary/60 hover:text-primary"
             >
-              <Phone className="h-4 w-4" /> Call +91 98765 43210
+              <Phone className="h-4 w-4" /> Call +91 80057 06894
             </a>
           </div>
         </div>

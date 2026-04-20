@@ -2,18 +2,18 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 
 import appCss from "../styles.css?url";
 
-const SITE_TITLE = "Best Gym in Sikar | Legacy Fitness — Premium Gym Sikar Rajasthan";
+const SITE_TITLE = "Best Gym in Sikar | VK Crossfit Gym — Premium Gym Sikar Rajasthan";
 const SITE_DESC =
-  "Legacy Fitness is Sikar's premium gym for real results. Imported equipment, certified trainers, weight loss & muscle gain programs. Open 6 AM – 11 PM. Join free trial.";
+  "VK Crossfit Gym is Sikar's premium gym for real results. Imported equipment, certified trainers, weight loss & muscle gain programs. Open 6 AM – 11 PM. Join free trial.";
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "HealthClub",
-  name: "Legacy Fitness — Premium Gym Sikar",
+  name: "VK Crossfit Gym — Premium Gym Sikar",
   image: "https://theme-craft-studio-22.lovable.app/og.jpg",
   "@id": "https://theme-craft-studio-22.lovable.app/",
   url: "https://theme-craft-studio-22.lovable.app/",
-  telephone: "+91-9876543210",
+  telephone: "+91-8005706894",
   priceRange: "₹₹",
   address: {
     "@type": "PostalAddress",

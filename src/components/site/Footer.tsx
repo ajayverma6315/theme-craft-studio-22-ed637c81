@@ -10,7 +10,7 @@ export function Footer() {
               LF
             </span>
             <span className="font-display text-xl tracking-wider">
-              LEGACY <span className="text-primary">FITNESS</span>
+              VK <span className="text-primary">CROSSFIT GYM</span>
             </span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -23,15 +23,15 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-foreground/85">
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-primary" />
-              <a href="tel:+919876543210" className="hover:text-primary">+91 98765 43210</a>
+              <a href="tel:+918005706894" className="hover:text-primary">+91 80057 06894</a>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-primary" />
-              <a href="mailto:hello@legacyfitnesssikar.in" className="hover:text-primary">hello@legacyfitnesssikar.in</a>
+              <a href="mailto:vkcrossfitgym@gmail.com" className="hover:text-primary">vkcrossfitgym@gmail.com</a>
             </li>
             <li className="flex items-center gap-2">
               <Instagram className="h-4 w-4 text-primary" />
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">@legacyfitness.sikar</a>
+              <a href="https://www.instagram.com/vkfittness/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">@vkfittness</a>
             </li>
           </ul>
         </div>
@@ -59,7 +59,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs uppercase tracking-widest text-muted-foreground md:flex-row">
-          <p>© {new Date().getFullYear()} Legacy Fitness, Sikar. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} VK Crossfit Gym, Sikar. All rights reserved.</p>
           <p>Best Gym in Sikar · Premium Fitness Center</p>
         </div>
       </div>
