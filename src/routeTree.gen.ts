@@ -13,7 +13,9 @@ import { Route as WorkoutsRouteImport } from './routes/workouts'
 import { Route as PhilosophyRouteImport } from './routes/philosophy'
 import { Route as MembershipsRouteImport } from './routes/memberships'
 import { Route as LocationsRouteImport } from './routes/locations'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as CoachesRouteImport } from './routes/coaches'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 
 const WorkoutsRoute = WorkoutsRouteImport.update({
@@ -36,9 +38,19 @@ const LocationsRoute = LocationsRouteImport.update({
   path: '/locations',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CoachesRoute = CoachesRouteImport.update({
   id: '/coaches',
   path: '/coaches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -49,7 +61,9 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
   '/coaches': typeof CoachesRoute
+  '/faq': typeof FaqRoute
   '/locations': typeof LocationsRoute
   '/memberships': typeof MembershipsRoute
   '/philosophy': typeof PhilosophyRoute
@@ -57,7 +71,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
   '/coaches': typeof CoachesRoute
+  '/faq': typeof FaqRoute
   '/locations': typeof LocationsRoute
   '/memberships': typeof MembershipsRoute
   '/philosophy': typeof PhilosophyRoute
@@ -66,7 +82,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
   '/coaches': typeof CoachesRoute
+  '/faq': typeof FaqRoute
   '/locations': typeof LocationsRoute
   '/memberships': typeof MembershipsRoute
   '/philosophy': typeof PhilosophyRoute
@@ -76,7 +94,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/blog'
     | '/coaches'
+    | '/faq'
     | '/locations'
     | '/memberships'
     | '/philosophy'
@@ -84,7 +104,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/blog'
     | '/coaches'
+    | '/faq'
     | '/locations'
     | '/memberships'
     | '/philosophy'
@@ -92,7 +114,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/blog'
     | '/coaches'
+    | '/faq'
     | '/locations'
     | '/memberships'
     | '/philosophy'
@@ -101,7 +125,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogRoute: typeof BlogRoute
   CoachesRoute: typeof CoachesRoute
+  FaqRoute: typeof FaqRoute
   LocationsRoute: typeof LocationsRoute
   MembershipsRoute: typeof MembershipsRoute
   PhilosophyRoute: typeof PhilosophyRoute
@@ -138,11 +164,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocationsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/coaches': {
       id: '/coaches'
       path: '/coaches'
       fullPath: '/coaches'
       preLoaderRoute: typeof CoachesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -157,7 +197,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogRoute: BlogRoute,
   CoachesRoute: CoachesRoute,
+  FaqRoute: FaqRoute,
   LocationsRoute: LocationsRoute,
   MembershipsRoute: MembershipsRoute,
   PhilosophyRoute: PhilosophyRoute,
