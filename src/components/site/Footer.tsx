@@ -7,10 +7,10 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2">
             <span className="grid h-9 w-9 place-items-center rounded-md bg-primary font-display text-lg font-bold text-primary-foreground">
-              LF
+              VK
             </span>
             <span className="font-display text-xl tracking-wider">
-              LEGACY <span className="text-primary">FITNESS</span>
+              VK <span className="text-primary">CROSSFIT</span>
             </span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -23,15 +23,15 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-foreground/85">
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-primary" />
-              <a href="tel:+919876543210" className="hover:text-primary">+91 98765 43210</a>
+              <a href="tel:+918005706894" className="hover:text-primary">+91 80057 06894</a>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-primary" />
-              <a href="mailto:hello@legacyfitnesssikar.in" className="hover:text-primary">hello@legacyfitnesssikar.in</a>
+              <a href="mailto:vkcrossfitgym@gmail.com" className="hover:text-primary">vkcrossfitgym@gmail.com</a>
             </li>
             <li className="flex items-center gap-2">
               <Instagram className="h-4 w-4 text-primary" />
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">@legacyfitness.sikar</a>
+              <a href="https://www.instagram.com/vkfittness/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">@vkfittness</a>
             </li>
           </ul>
         </div>
@@ -40,7 +40,7 @@ export function Footer() {
           <h4 className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Address</h4>
           <p className="mt-4 flex items-start gap-2 text-sm text-foreground/85">
             <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-            Piprali Road, Near Subhash Chowk,<br /> Sikar, Rajasthan 332001
+            Piprali Rd, near Dhanvantari Ayurvedic College,<br /> Jaldhari Nagar, Sikar, Rajasthan 332001
           </p>
         </div>
 
@@ -48,10 +48,10 @@ export function Footer() {
           <h4 className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Hours</h4>
           <ul className="mt-4 space-y-2 text-sm text-foreground/85">
             <li className="flex items-center gap-2">
-              <Clock className="h-4 w-4 text-primary" /> Mon–Sat · 6:00 AM – 11:00 PM
+              <Clock className="h-4 w-4 text-primary" /> Mon–Sat · 5:00 AM – 9:00 PM
             </li>
             <li className="flex items-center gap-2">
-              <Clock className="h-4 w-4 text-primary" /> Sunday · 7:00 AM – 1:00 PM
+              <Clock className="h-4 w-4 text-primary" /> Sunday · By appointment
             </li>
           </ul>
         </div>
@@ -59,7 +59,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs uppercase tracking-widest text-muted-foreground md:flex-row">
-          <p>© {new Date().getFullYear()} Legacy Fitness, Sikar. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} VK Crossfit Gym, Sikar. All rights reserved.</p>
           <p>Best Gym in Sikar · Premium Fitness Center</p>
         </div>
       </div>

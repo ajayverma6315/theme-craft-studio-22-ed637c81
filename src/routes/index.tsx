@@ -30,13 +30,13 @@ import gymPulley from "@/assets/gym-pulley.webp";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Best Gym in Sikar | Legacy Fitness — Premium Gym Sikar Rajasthan" },
+      { title: "Best Gym in Sikar | VK Crossfit Gym — Premium Gym Sikar Rajasthan" },
       {
         name: "description",
         content:
-          "Legacy Fitness is Sikar's premium gym. Imported equipment, certified trainers, weight loss & muscle gain programs. Open 6 AM – 11 PM. Book a free trial today.",
+          "VK Crossfit Gym is Sikar's premium gym. Imported equipment, certified trainers, weight loss & muscle gain programs. Open 6 AM – 11 PM. Book a free trial today.",
       },
-      { property: "og:title", content: "Legacy Fitness — Best Premium Gym in Sikar" },
+      { property: "og:title", content: "VK Crossfit Gym — Best Premium Gym in Sikar" },
       {
         property: "og:description",
         content: "Real results, real equipment, real coaches in Sikar, Rajasthan.",
@@ -89,7 +89,7 @@ const reviews = [
     name: "Vikram Singh",
     role: "Member · 2 years",
     stars: 5,
-    text: "I've tried 3 gyms in Sikar — Legacy Fitness is in a different league. Imported machines, AC, music, and coaches who care. Worth every rupee.",
+    text: "I've tried 3 gyms in Sikar — VK Crossfit Gym is in a different league. Imported machines, AC, music, and coaches who care. Worth every rupee.",
   },
 ];
 
@@ -118,7 +118,7 @@ const pricing = [
   },
 ];
 
-const wa = "https://wa.me/919876543210?text=Hi%20Legacy%20Fitness%2C%20I%20want%20to%20book%20a%20free%20trial.";
+const wa = "https://wa.me/918005706894?text=Hi%20VK%20Crossfit%20Gym%2C%20I%20want%20to%20book%20a%20free%20trial.";
 
 function HomePage() {
   return (
@@ -127,7 +127,7 @@ function HomePage() {
       <section className="relative isolate overflow-hidden">
         <img
           src={gymYellow}
-          alt="Legacy Fitness premium gym floor in Sikar with yellow strength equipment"
+          alt="VK Crossfit Gym premium gym floor in Sikar with yellow strength equipment"
           width={1600}
           height={1067}
           fetchPriority="high"
@@ -161,7 +161,7 @@ function HomePage() {
                 <MessageCircle className="h-4 w-4" /> Join Free Trial
               </a>
               <a
-                href="tel:+919876543210"
+                href="tel:+918005706894"
                 className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/5 px-7 py-4 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur transition hover:border-primary/60 hover:text-primary"
               >
                 <Phone className="h-4 w-4" /> Call Now
@@ -202,7 +202,7 @@ function HomePage() {
         <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="eyebrow">— The Facility</p>
-            <h2 className="mt-3 font-display text-4xl md:text-6xl">Explore Legacy Fitness</h2>
+            <h2 className="mt-3 font-display text-4xl md:text-6xl">Explore VK Crossfit Gym</h2>
           </div>
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
             Step inside Sikar's most equipped gym floor. Premium machines, free weights,
@@ -213,7 +213,7 @@ function HomePage() {
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           {[
             { src: gymFloor1, alt: "Spacious gym floor with treadmills and benches in Sikar", span: "col-span-2 row-span-2 aspect-square md:aspect-auto" },
-            { src: gymRack, alt: "Power rack and squat zone at Legacy Fitness Sikar", span: "aspect-square" },
+            { src: gymRack, alt: "Power rack and squat zone at VK Crossfit Gym Sikar", span: "aspect-square" },
             { src: gymCable, alt: "Cable cross-over machine at Sikar gym", span: "aspect-square" },
             { src: gymBench, alt: "Adjustable bench and dumbbell zone", span: "aspect-square" },
             { src: gymWood, alt: "Premium gym interior with wooden ceiling design", span: "aspect-square" },
@@ -276,7 +276,7 @@ function HomePage() {
           <div className="relative">
             <img
               src={gymRack}
-              alt="Premium yellow strength equipment at Legacy Fitness Sikar"
+              alt="Premium yellow strength equipment at VK Crossfit Gym Sikar"
               loading="lazy"
               width={1024}
               height={768}
@@ -289,7 +289,7 @@ function HomePage() {
           </div>
 
           <div>
-            <p className="eyebrow">— Why Legacy Fitness</p>
+            <p className="eyebrow">— Why VK Crossfit Gym</p>
             <h2 className="mt-3 font-display text-4xl md:text-5xl">Built For People Who Want Real Results</h2>
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
               We didn't build another crowded gym. We built Sikar's most equipped, cleanest,
@@ -408,34 +408,33 @@ function HomePage() {
             <p className="eyebrow">— Visit Us</p>
             <h2 className="mt-3 font-display text-4xl md:text-5xl">Walk In Today</h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
-              We're located on Piprali Road in Sikar — easy to find, easy to park.
-              Drop by anytime during open hours for a tour.
+              We're on Piprali Road, near Dhanvantari Ayurvedic College, Jaldhari Nagar — easy to find, easy to park. Drop by anytime during open hours for a tour.
             </p>
             <ul className="mt-8 space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 text-primary" />
                 <span className="text-foreground/90">
-                  Piprali Road, Near Subhash Chowk,<br />
-                  Sikar, Rajasthan 332001
+                  Piprali Rd, near Dhanvantari Ayurvedic College,<br />
+                  Jaldhari Nagar, Sikar, Rajasthan 332001
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="mt-0.5 h-5 w-5 text-primary" />
                 <span className="text-foreground/90">
-                  Mon – Sat · 6:00 AM – 11:00 PM<br />
-                  Sunday · 7:00 AM – 1:00 PM
+                  Mon – Sat · 5:00 AM – 9:00 PM<br />
+                  Sunday · By appointment
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-5 w-5 text-primary" />
-                <a href="tel:+919876543210" className="text-foreground/90 hover:text-primary">
-                  +91 98765 43210
+                <a href="tel:+918005706894" className="text-foreground/90 hover:text-primary">
+                  +91 80057 06894
                 </a>
               </li>
             </ul>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=Sikar+Rajasthan"
+                href="https://www.google.com/maps/dir/?api=1&destination=Vk+Crossfit+Gym+Sikar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 text-xs font-bold uppercase tracking-widest text-primary-foreground transition hover:opacity-90"
@@ -454,8 +453,8 @@ function HomePage() {
           </div>
           <div className="overflow-hidden rounded-lg border border-white/10 shadow-[var(--shadow-card)]">
             <iframe
-              title="Legacy Fitness Gym Sikar Location"
-              src="https://www.google.com/maps?q=Sikar,Rajasthan&output=embed"
+              title="VK Crossfit Gym Sikar Location"
+              src="https://www.google.com/maps?q=Vk+Crossfit+Gym+Sikar+Piprali+Road&output=embed"
               width="100%"
               height="450"
               loading="lazy"
@@ -470,7 +469,7 @@ function HomePage() {
       <section className="relative isolate overflow-hidden">
         <img
           src={gymWood}
-          alt="Legacy Fitness Sikar gym interior"
+          alt="VK Crossfit Gym Sikar gym interior"
           loading="lazy"
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-30"
         />
@@ -494,10 +493,10 @@ function HomePage() {
               <MessageCircle className="h-4 w-4" /> WhatsApp Now
             </a>
             <a
-              href="tel:+919876543210"
+              href="tel:+918005706894"
               className="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold uppercase tracking-widest text-foreground transition hover:border-primary/60 hover:text-primary"
             >
-              <Phone className="h-4 w-4" /> Call +91 98765 43210
+              <Phone className="h-4 w-4" /> Call +91 80057 06894
             </a>
           </div>
         </div>

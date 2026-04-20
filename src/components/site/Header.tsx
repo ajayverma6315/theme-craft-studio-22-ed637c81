@@ -35,10 +35,10 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <span className="grid h-9 w-9 place-items-center rounded-md bg-primary font-display text-lg font-bold text-primary-foreground">
-            LF
+            VK
           </span>
           <span className="font-display text-xl tracking-wider text-foreground">
-            LEGACY <span className="text-primary">FITNESS</span>
+            VK <span className="text-primary">CROSSFIT</span>
           </span>
         </Link>
 
@@ -66,13 +66,13 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <a
-            href="tel:+919876543210"
+            href="tel:+918005706894"
             className="hidden items-center gap-2 rounded-md border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-foreground transition hover:border-primary/60 hover:text-primary sm:inline-flex"
           >
             <Phone className="h-3.5 w-3.5" /> Call
           </a>
           <a
-            href="https://wa.me/919876543210?text=Hi%20Legacy%20Fitness%2C%20I%20want%20to%20book%20a%20free%20trial."
+            href="https://wa.me/918005706894?text=Hi%20VK%20Crossfit%20Gym%2C%20I%20want%20to%20book%20a%20free%20trial."
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-md bg-primary px-5 py-2 text-xs font-bold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90 sm:inline-block"
@@ -113,7 +113,7 @@ export function Header() {
               </Link>
             ))}
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/918005706894"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 rounded-md bg-primary px-5 py-3 text-center text-sm font-bold uppercase tracking-widest text-primary-foreground"
