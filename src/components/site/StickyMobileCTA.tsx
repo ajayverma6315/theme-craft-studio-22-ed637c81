@@ -11,7 +11,7 @@ export function StickyMobileCTA() {
           <Phone className="h-4 w-4 text-primary" /> Call Now
         </a>
         <a
-          href="https://wa.me/919876543210?text=Hi%20Iron%20Forge%2C%20I%20want%20to%20join."
+          href="https://wa.me/919876543210?text=Hi%20Legacy%20Fitness%2C%20I%20want%20to%20join."
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 bg-primary py-3.5 text-sm font-bold uppercase tracking-widest text-primary-foreground"

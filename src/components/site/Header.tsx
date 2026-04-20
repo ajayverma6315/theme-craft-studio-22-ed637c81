@@ -35,10 +35,10 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <span className="grid h-9 w-9 place-items-center rounded-md bg-primary font-display text-lg font-bold text-primary-foreground">
-            IF
+            LF
           </span>
           <span className="font-display text-xl tracking-wider text-foreground">
-            IRON <span className="text-primary">FORGE</span>
+            LEGACY <span className="text-primary">FITNESS</span>
           </span>
         </Link>
 
@@ -72,7 +72,7 @@ export function Header() {
             <Phone className="h-3.5 w-3.5" /> Call
           </a>
           <a
-            href="https://wa.me/919876543210?text=Hi%20Iron%20Forge%2C%20I%20want%20to%20book%20a%20free%20trial."
+            href="https://wa.me/919876543210?text=Hi%20Legacy%20Fitness%2C%20I%20want%20to%20book%20a%20free%20trial."
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-md bg-primary px-5 py-2 text-xs font-bold uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-glow)] transition hover:opacity-90 sm:inline-block"

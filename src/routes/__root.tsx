@@ -2,14 +2,14 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 
 import appCss from "../styles.css?url";
 
-const SITE_TITLE = "Best Gym in Sikar | Iron Forge Fitness — Premium Gym Sikar Rajasthan";
+const SITE_TITLE = "Best Gym in Sikar | Legacy Fitness — Premium Gym Sikar Rajasthan";
 const SITE_DESC =
-  "Iron Forge is Sikar's premium gym for real results. Imported equipment, certified trainers, weight loss & muscle gain programs. Open 6 AM – 11 PM. Join free trial.";
+  "Legacy Fitness is Sikar's premium gym for real results. Imported equipment, certified trainers, weight loss & muscle gain programs. Open 6 AM – 11 PM. Join free trial.";
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "HealthClub",
-  name: "Iron Forge Fitness — Premium Gym Sikar",
+  name: "Legacy Fitness — Premium Gym Sikar",
   image: "https://theme-craft-studio-22.lovable.app/og.jpg",
   "@id": "https://theme-craft-studio-22.lovable.app/",
   url: "https://theme-craft-studio-22.lovable.app/",
