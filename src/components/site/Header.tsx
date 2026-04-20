@@ -92,7 +92,7 @@ export function Header() {
       {open && (
         <nav className="border-t border-white/10 bg-background md:hidden">
           <div className="mx-auto flex max-w-7xl flex-col px-5 py-3">
-            {nav.map((item) => (
+            {hashNav.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -101,6 +101,16 @@ export function Header() {
               >
                 {item.label}
               </a>
+            ))}
+            {routeNav.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                onClick={() => setOpen(false)}
+                className="border-b border-white/5 py-3 text-sm font-semibold uppercase tracking-widest text-foreground/80"
+              >
+                {item.label}
+              </Link>
             ))}
             <a
               href="https://wa.me/919876543210"
