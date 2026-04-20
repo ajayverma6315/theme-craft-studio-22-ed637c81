@@ -74,7 +74,7 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#0c0c0d" },
       { title: SITE_TITLE },
       { name: "description", content: SITE_DESC },
-      { name: "keywords", content: "best gym in sikar, premium gym sikar, fitness center sikar, personal trainer sikar, weight loss gym sikar, gym near me sikar, muscle gain sikar" },
+      { name: "keywords", content: "vk crossfit gym, vk fitness sikar, best gym in sikar, crossfit sikar, premium gym sikar, fitness center sikar, personal trainer sikar, weight loss gym sikar, gym near me sikar, muscle gain sikar, piprali road gym" },
       { property: "og:title", content: SITE_TITLE },
       { property: "og:description", content: SITE_DESC },
       { property: "og:type", content: "website" },
