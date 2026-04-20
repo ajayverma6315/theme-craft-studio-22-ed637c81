@@ -2,13 +2,16 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 
-const nav = [
-  { href: "#facility", label: "Facility" },
-  { href: "#programs", label: "Programs" },
-  { href: "#why", label: "Why Us" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#location", label: "Location" },
+const hashNav = [
+  { href: "/#facility", label: "Facility" },
+  { href: "/#programs", label: "Programs" },
+  { href: "/#pricing", label: "Pricing" },
 ];
+
+const routeNav = [
+  { to: "/blog", label: "Blog" },
+  { to: "/faq", label: "FAQ" },
+] as const;
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -39,8 +42,8 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {nav.map((item) => (
+        <nav className="hidden items-center gap-7 md:flex">
+          {hashNav.map((item) => (
             <a
               key={item.href}
               href={item.href}
@@ -48,6 +51,16 @@ export function Header() {
             >
               {item.label}
             </a>
+          ))}
+          {routeNav.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="text-xs font-semibold uppercase tracking-[0.2em] text-foreground/70 transition-colors hover:text-primary"
+              activeProps={{ className: "text-primary" }}
+            >
+              {item.label}
+            </Link>
           ))}
         </nav>
 
@@ -79,7 +92,7 @@ export function Header() {
       {open && (
         <nav className="border-t border-white/10 bg-background md:hidden">
           <div className="mx-auto flex max-w-7xl flex-col px-5 py-3">
-            {nav.map((item) => (
+            {hashNav.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -88,6 +101,16 @@ export function Header() {
               >
                 {item.label}
               </a>
+            ))}
+            {routeNav.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                onClick={() => setOpen(false)}
+                className="border-b border-white/5 py-3 text-sm font-semibold uppercase tracking-widest text-foreground/80"
+              >
+                {item.label}
+              </Link>
             ))}
             <a
               href="https://wa.me/919876543210"
