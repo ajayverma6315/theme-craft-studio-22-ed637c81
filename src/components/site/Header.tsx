@@ -42,8 +42,8 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {nav.map((item) => (
+        <nav className="hidden items-center gap-7 md:flex">
+          {hashNav.map((item) => (
             <a
               key={item.href}
               href={item.href}
@@ -51,6 +51,16 @@ export function Header() {
             >
               {item.label}
             </a>
+          ))}
+          {routeNav.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="text-xs font-semibold uppercase tracking-[0.2em] text-foreground/70 transition-colors hover:text-primary"
+              activeProps={{ className: "text-primary" }}
+            >
+              {item.label}
+            </Link>
           ))}
         </nav>
 
