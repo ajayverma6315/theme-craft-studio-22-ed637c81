@@ -7,10 +7,10 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2">
             <span className="grid h-9 w-9 place-items-center rounded-md bg-primary font-display text-lg font-bold text-primary-foreground">
-              IF
+              LF
             </span>
             <span className="font-display text-xl tracking-wider">
-              IRON <span className="text-primary">FORGE</span>
+              LEGACY <span className="text-primary">FITNESS</span>
             </span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -27,11 +27,11 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-primary" />
-              <a href="mailto:hello@ironforgesikar.in" className="hover:text-primary">hello@ironforgesikar.in</a>
+              <a href="mailto:hello@legacyfitnesssikar.in" className="hover:text-primary">hello@legacyfitnesssikar.in</a>
             </li>
             <li className="flex items-center gap-2">
               <Instagram className="h-4 w-4 text-primary" />
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">@ironforge.sikar</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">@legacyfitness.sikar</a>
             </li>
           </ul>
         </div>
